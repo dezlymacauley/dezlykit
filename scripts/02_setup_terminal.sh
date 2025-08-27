@@ -33,6 +33,9 @@ echo
 sudo pacman -S --needed tree
 echo
 
+sudo pacman -S --needed udiskie
+echo
+
 sudo pacman -S --needed yazi
 echo
 
