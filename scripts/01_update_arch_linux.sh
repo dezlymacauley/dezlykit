@@ -16,6 +16,7 @@ install_upgrade_arch_linux() {
 	sudo pacman -Syu
     else
         echo "Arch Linux upgrade canceled."
+	echo
     fi
 }
 
