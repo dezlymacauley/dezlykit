@@ -33,45 +33,30 @@ sudo pacman -S --needed pavucontrol
 sudo pacman -S --needed rofi
 
 #______________________________________________________________________________
-# Image Viewer
 
-sudo pacman -S --needed viewnior
+desktop_environment_packages=(
+	
+	# Media Players
+	viewnior		# Image Viewer 
+	mpv 			# Video player
 
-#______________________________________________________________________________
-# Video Player
+	# Desktop Portals
+	xdg-desktop-portal-gtk
+	xdg-desktop-portal-hyprland
 
-sudo pacman -S --needed mpv
+	# Hyprland Tiling Window Manager Ecosystem
+	hyprland
+	hyprpaper
+	hyprpolkitagent
 
-#______________________________________________________________________________
-# Desktop Portals
-
-# sudo pacman -S --noconfirm --needed \
-# xdg-desktop-portal-gtk \
-# xdg-desktop-portal-hyprland
-
-#______________________________________________________________________________
-# Hyprland Tiling Window Manager Ecosystem
-
-# sudo pacman -S --noconfirm --needed \
-# hyprland \
-# hyprpaper \
-# hyprpolkitagent
-
-packages=(
-  obs-studio       	# Video recording
-  kdenlive         	# Video editing
-  libreoffice-fresh 	# Document viewing and creation
+	# Hyprland Tiling Window Manager Ecosystem
+	
+	# Content Creation Tools
+	obs-studio       	# Video recording
+	kdenlive         	# Video editing
+	libreoffice-fresh 	# Document viewing and creation
 )
 
-sudo pacman -S --noconfirm --needed "${packages[@]}"
-
-
-#______________________________________________________________________________
-# Content Creation Tools
-
-# sudo pacman -S --noconfirm --needed \
-# obs-studio \ 		# Video recording
-# kdenlive \		# Video Editing
-# libreoffice-fresh 	# Document viewing and creation
+sudo pacman -S --noconfirm --needed "${desktop_environment_packages[@]}"
 
 #______________________________________________________________________________
