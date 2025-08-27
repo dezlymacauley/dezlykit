@@ -4,6 +4,7 @@
 # Clipboard Manager
 
 sudo pacman -S --needed wl-clipboard
+sudo pacman -S --needed wl-clip-persist
 
 #______________________________________________________________________________
 # Notification Manager
@@ -44,23 +45,33 @@ sudo pacman -S --needed mpv
 #______________________________________________________________________________
 # Desktop Portals
 
-sudo pacman -S --needed xdg-desktop-portal-gtk
-sudo pacman -S --needed xdg-desktop-portal-hyprland
+# sudo pacman -S --noconfirm --needed \
+# xdg-desktop-portal-gtk \
+# xdg-desktop-portal-hyprland
 
 #______________________________________________________________________________
 # Hyprland Tiling Window Manager Ecosystem
 
-sudo pacman -S --needed hyprland
-sudo pacman -S --needed hyprpaper
-sudo pacman -S --needed hyprpolkitagent
+# sudo pacman -S --noconfirm --needed \
+# hyprland \
+# hyprpaper \
+# hyprpolkitagent
+
+packages=(
+  obs-studio       	# Video recording
+  kdenlive         	# Video editing
+  libreoffice-fresh 	# Document viewing and creation
+)
+
+sudo pacman -S --noconfirm --needed "${packages[@]}"
+
 
 #______________________________________________________________________________
 # Content Creation Tools
 
-# Video recording
-sudo pacman -S --needed obs-studio
-
-# Document viewing and creation
-sudo pacman -S --needed libreoffice-fresh
+# sudo pacman -S --noconfirm --needed \
+# obs-studio \ 		# Video recording
+# kdenlive \		# Video Editing
+# libreoffice-fresh 	# Document viewing and creation
 
 #______________________________________________________________________________

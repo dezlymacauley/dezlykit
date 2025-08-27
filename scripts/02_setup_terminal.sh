@@ -24,6 +24,12 @@ echo
 sudo pacman -S --needed lsd
 echo
 
+sudo pacman -S --needed neovim
+echo
+
+sudo pacman -S --needed ripgrep
+echo
+
 sudo pacman -S --needed starship
 echo
 
