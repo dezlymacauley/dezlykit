@@ -24,12 +24,6 @@ echo
 sudo pacman -S --needed lsd
 echo
 
-sudo pacman -S --needed neovim
-echo
-
-sudo pacman -S --needed ripgrep
-echo
-
 sudo pacman -S --needed starship
 echo
 
@@ -75,5 +69,46 @@ load_save_bashrc() {
 }
 
 load_save_bashrc
+
+#______________________________________________________________________________
+# Install Neovim 
+# I have chosen to build from source so that I am always using the latest
+# version of Neovim.
+
+# Step 1: First install the build prerequisites for Arch Linux
+sudo pacman -S --needed base-devel cmake ninja curl git
+
+# Step 2: Create a directory for source built packages
+mkdir -p "$HOME/.src-built-pkgs"
+
+# I am creating a sub shell so that I can safely 
+# enter `$HOME/.src-built-pkgs" without changing the directory that this main
+# script is runing from.
+
+(
+	# Enter the directory for source built packages
+	cd $HOME/.src-built-pkgs
+	
+	# Clone the Neovim directory from GitHub.
+	# `--depth 1` is used to speed things up, 
+	# because I am cloning the latest commit 
+	# instead of the entire project history.
+
+	if [[ ! -d "$HOME/.src-built-pkgs/neovim" ]]; then
+	    git clone --depth 1 https://github.com/neovim/neovim.git "$HOME/.src-built-pkgs/neovim"
+	fi
+
+	# Enter the Neovim directory
+	cd neovim
+
+	# Build from source
+	make CMAKE_BUILD_TYPE=RelWithDebInfo
+
+	# Install the binaries system-wide so that the `nvim` command
+	# can be used from any directory without having to use sudo
+	# to run it.
+	sudo make install
+
+)
 
 #______________________________________________________________________________
