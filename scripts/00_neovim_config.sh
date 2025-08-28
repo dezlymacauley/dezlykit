@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-#______________________________________________________________________________
-# Neovim
-
 has_neovim_config=""
 
 if [[ ! -d "$HOME/.config/nvim/" ]]; then
@@ -47,5 +44,3 @@ else
 	    echo "Your current Neovim configuration has replaced the default."
 	fi
 fi
-
-#______________________________________________________________________________
