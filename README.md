@@ -24,9 +24,11 @@ _______________________________________________________________________________
     - 🦀 Rust
     - ➕ C++
     - 🦎 Zig
+    - 🇨 C (Comming Soon)
 
 - AI Engineering:           
     - 🐍 Python
+    - 🔥 Mojo (Comming Soon)
 
 - Backend Servers:           
     - 🐹 Go
