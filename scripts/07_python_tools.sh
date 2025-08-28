@@ -28,5 +28,17 @@ uv tool install litecli
 # CLI for Postgres Database. With auto-completion and syntax highlighting
 uv tool install pgcli
 
+#______________________________________________________________________________
+# SECTION: Mojo (Python programming language)
+
+# A package management and workflow tool. 
+# This is the recommended way to setup Mojo for now 
+# because the uv setup does not come with Mojo as a standalone package.
+# https://docs.modular.com/pixi/#create-a-project-and-virtual-environment
+
+sudo pacman -S --needed pixi
+
+# https://docs.modular.com/mojo/manual/get-started#1-create-a-mojo-project
+# TODO: Read this first before running this command.
 
 #______________________________________________________________________________
