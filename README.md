@@ -23,12 +23,29 @@ _______________________________________________________________________________
 - Low-Level Programming:    
     - 🦀 Rust
     - ➕ C++
+    - 🦎 Zig
 
 - AI Engineering:           
     - 🐍 Python
 
 - Backend Servers:           
     - 🐹 Go
+
+- UX Design (Web & Mobile):
+    - Web:
+        - ⚡ Bun
+        - 🟡 JavaScript
+        - 🔵 TypeScript
+        - 🔸 Svelte
+        - 🔶 SvelteKit
+        - ⚛️ React
+        - 🔳 Next.js
+        - 🎨 TailwindCSS
+        - 🎞️ GSAP
+
+    - Mobile:
+        - 📱 React Native
+        - 🍃 Nativewind
 
 _______________________________________________________________________________
 ## License
