@@ -52,3 +52,18 @@ vim.o.showmode = false
 -- "auto" will hide the sign column on the left of the line numbers 
 -- when there are no signs to show
 vim.o.signcolumn = "auto"
+
+-- Neovim uses the character `~` to show that 
+-- you have reached the end of a file.
+-- The technical term is `eob` (end of buffer).
+-- So you may see a virtical column of `~` characters when you first open
+-- up Neovim or when you are using a transparent background.
+-- To clean up the UI, use this line to replace all the eob characters
+-- with an empty space.
+vim.opt.fillchars:append({ eob = " " })
+
+-- When using the command `:new`, Horizontal splits always open below
+vim.opt.splitbelow = true
+
+-- When using the command `:vnew`, Vertical splits always open on the right
+vim.opt.splitright = true

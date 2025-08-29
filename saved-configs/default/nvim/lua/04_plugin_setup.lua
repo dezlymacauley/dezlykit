@@ -7,9 +7,22 @@ vim.pack.add({
 	-- My favourite theme: One Dark
     { src = "https://github.com/navarasu/onedark.nvim" },
 
+    -- Highlights bracket pairs and html pairs in different colours 
+    -- to make it easier to keep track of nested scopes in functions
+    { src = "https://github.com/HiPhish/rainbow-delimiters.nvim" },
+
 -- Navigation Plugins
 
 	{ src = "https://github.com/stevearc/oil.nvim" },
+
+    -- Helps me to quickly see what buffers I have open
+    { src = "https://github.com/akinsho/bufferline.nvim" },
+
+    -- This is a dependency of `bufferline.nvim`
+    -- It provides the filetype icons next the the name of the tab
+    -- It is also used by `oil.nvim` to display icons next to the file name.
+    { src = "https://github.com/nvim-tree/nvim-web-devicons"},
+
 
 -- Programming Tools
 	-- Syntax highlighting
@@ -24,7 +37,7 @@ vim.pack.add({
     -- When you type ( or { or [,
     -- the closing of the pair will be added for you.
     -- E.g. () {} [] `` '' ""
-	{ src = "https://github.com/windwp/nvim-autopairs" },
+	{ src = "https://github.com/windwp/nvim-autopairs" }
 
 })
 
@@ -53,6 +66,17 @@ require("oil").setup({
 		-- Show files and directories that start with "."
 		view_options = {
 		    show_hidden = true
+		},
+
+        -- I've disabled the default keymaps to avoid clashes.
+		use_default_keymaps = false,
+		
+        -- This is the only default keymap that I want to keep.
+        -- I only want to Enter as a keymap
+		keymaps = {
+		    -- When using Oil.nvim you can enter a directory by
+		    -- pressing enter
+		    ["<CR>"] = "actions.select",
 		}
 
 })
@@ -79,13 +103,18 @@ require("nvim-treesitter.configs").setup({
 		"go", "gomod",
 
 		-- UX Design
-		"css", "html", "javascript", "tsx", "typescript", "svelte"
+		"css", "html", "javascript", "tsx", "typescript", "svelte",
+
+        -- General Purpose
+        "bash", "csv", "lua", "toml"
 	}
 
 })
 
 require("blink.cmp").setup({})
 require("nvim-autopairs").setup({})
-
+require("rainbow-delimiters.setup").setup({})
+require("bufferline").setup({})
+require("nvim-web-devicons").setup({})
 
 -------------------------------------------------------------------------------
