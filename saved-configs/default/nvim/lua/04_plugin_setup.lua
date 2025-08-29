@@ -5,7 +5,7 @@ vim.pack.add({
 -- User Interface Tools
 	
 	-- My favourite theme: One Dark
-        { src = "https://github.com/navarasu/onedark.nvim" },
+    { src = "https://github.com/navarasu/onedark.nvim" },
 
 -- Navigation Plugins
 
@@ -15,10 +15,16 @@ vim.pack.add({
 	-- Syntax highlighting
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 
-	-- Autocompletion
+	-- Text / Code Autocompletion
 	-- Pick a version number from this list or it won't work
 	-- https://github.com/Saghen/blink.cmp/releases
 	{ src = "https://github.com/Saghen/blink.cmp", version = "v1.6.0" },
+
+    -- Bracket Pair Autocompletion 
+    -- When you type ( or { or [,
+    -- the closing of the pair will be added for you.
+    -- E.g. () {} [] `` '' ""
+	{ src = "https://github.com/windwp/nvim-autopairs" },
 
 })
 
@@ -79,5 +85,7 @@ require("nvim-treesitter.configs").setup({
 })
 
 require("blink.cmp").setup({})
+require("nvim-autopairs").setup({})
+
 
 -------------------------------------------------------------------------------

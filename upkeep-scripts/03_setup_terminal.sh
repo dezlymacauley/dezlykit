@@ -18,6 +18,8 @@ echo
 sudo pacman -S --needed ghostty
 echo
 
+sudo pacman -S --needed ttf-meslo-nerd
+
 sudo pacman -S --needed git
 echo
 
