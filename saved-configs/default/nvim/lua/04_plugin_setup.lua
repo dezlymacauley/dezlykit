@@ -2,17 +2,23 @@
 
 vim.pack.add({
 
-        -- User Interface Tools
+-- User Interface Tools
+	
+	-- My favourite theme: One Dark
         { src = "https://github.com/navarasu/onedark.nvim" },
 
-	-- Navigation Plugins
+-- Navigation Plugins
+
 	{ src = "https://github.com/stevearc/oil.nvim" },
 
-	-- Programming Tools
-	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" }
+-- Programming Tools
+	-- Syntax highlighting
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 
-	
-
+	-- Autocompletion
+	-- Pick a version number from this list or it won't work
+	-- https://github.com/Saghen/blink.cmp/releases
+	{ src = "https://github.com/Saghen/blink.cmp", version = "v1.6.0" },
 
 })
 
@@ -71,5 +77,7 @@ require("nvim-treesitter.configs").setup({
 	}
 
 })
+
+require("blink.cmp").setup({})
 
 -------------------------------------------------------------------------------

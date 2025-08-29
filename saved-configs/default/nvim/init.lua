@@ -1,7 +1,6 @@
-require("globals")
-require("options")
-require("plugins")
-require("keymaps")
-
--- Purple status line
-vim.api.nvim_set_hl(0, "StatusLine", { bg = "#800080", fg = "#ffffff" })
+require("01_leader_key")
+require("02_native_options")
+require("03_lsp_configs")
+require("04_plugin_setup")
+require("05_custom_highlights")
+require("06_custom_keymaps")

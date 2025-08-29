@@ -10,6 +10,13 @@ vim.keymap.set(
          { desc = "Save and reload current file", silent = true }
 )
 
+-- `vim.lsp` is vim's native keymap.
+-- auto-formats your code based on the language server’s formatting rules.
+vim.keymap.set(
+	"n", "<leader>lf", vim.lsp.buf.format
+)
+
+
 --=============================================================================
 -- SECTION: Keymaps for plugins
 

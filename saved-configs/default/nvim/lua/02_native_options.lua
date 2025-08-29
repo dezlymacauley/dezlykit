@@ -14,3 +14,9 @@ vim.o.wrap = false
 
 -- Displays a horizontal line that shows what line your cursor is on.
 vim.o.cursorline = true
+
+-- 4 Space indentation
+vim.o.expandtab = true
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
