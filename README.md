@@ -10,13 +10,17 @@ _______________________________________________________________________________
 ```sh
 git clone https://github.com/dezlymacauley/dezlykit.git $HOME/.config/dezlykit
 cd $HOME/.config/dezlykit
-./install_upgrade_dezlykit.sh
+./dezlykit_upkeep.sh
 ```
 
 #### Note: 
-Please restart your system after runing `./install_upgrade_dezlykit.sh` 
-for the first time
+Please restart your system after runing 
+`./dezlykit_upkeep.sh` for the first time
 
+To launch the desktop environment run this command.
+```sh
+Hyprland
+```
 _______________________________________________________________________________
 ## Workflows Supported
 

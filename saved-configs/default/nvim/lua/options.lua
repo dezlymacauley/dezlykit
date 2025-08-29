@@ -5,10 +5,12 @@
 -- between Neovim and other applications.
 vim.o.clipboard = "unnamedplus"
 
+vim.o.swapfile = false
+
 vim.o.number = true -- Show line numbers
 
 -- Text will stay on the same line no matter the size of the terminal
 vim.o.wrap = false
 
 -- Displays a horizontal line that shows what line your cursor is on.
-vim.opt.cursorline = true
+vim.o.cursorline = true

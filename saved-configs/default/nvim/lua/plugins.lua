@@ -1,15 +1,36 @@
 -- Install plugins using Neovim's native plugin manager
 
 vim.pack.add({
+
+        -- User Interface Tools
+        { src = "https://github.com/navarasu/onedark.nvim" },
+
 	-- Navigation Plugins
 	{ src = "https://github.com/stevearc/oil.nvim" },
 
 	-- Programming Tools
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" }
+
+	
+
+
 })
 
 -------------------------------------------------------------------------------
 -- Configure installed plugins
+
+-- The first task is to setup the default configurations 
+-- of the plugin
+require("onedark").setup({
+	style = "deep",
+	-- transparent = true
+})
+
+-- The second task is to actually set the plugin
+-- as the colour scheme for the Neovim editor.
+-- Most plugins that are not colour schemes will not have
+-- a second task.
+require("onedark").load()
 
 require("oil").setup({
 
