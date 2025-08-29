@@ -1,0 +1,76 @@
+# SECTION: General Settings
+
+# Everything listed under `[mgr]` controls general settings 
+# for the file manager
+[mgr]
+
+# Show hidden files like `.zshrc` in the file explorer
+show_hidden = true
+
+#______________________________________________________________________________
+# SECTION: Defining which programs have the ability to open files 
+
+[opener]
+
+gimp = [
+    { run = 'gimp "$@"', orphan = true, for = "unix" }
+]
+
+nvim = [
+    # This will open a new Ghostty terminal and then, 
+    # use Neovim to open the file
+    # `ophan = true` just means that the program should 
+    # open in a separate terminal.
+    { run = 'ghostty nvim "$@"', orphan = true, for = "unix" }
+]
+
+mpv = [
+    { run = 'mpv "$@"', orphan = true, for = "unix" }
+]
+
+viewnior = [
+    { run = 'viewnior "$@"', orphan = true, for = "unix" }
+]
+
+firefox = [
+    { run = 'firefox "$@"', orphan = true, for = "unix" }
+]
+
+libreoffice-writer = [
+    { run = 'libreoffice --writer "$@"', orphan = true, for = "unix" }
+]
+
+#______________________________________________________________________________
+# SECTION: Define what programs yazi should use to open a file type
+
+[open]
+rules = [
+
+    # Web Pages
+    { name = "*.html", use = "firefox" },
+    { name = "*.url", use = "firefox" },
+
+    # Documentation Files
+    { name = "*.md", use = "nvim" },
+    { name = "*.pdf", use = "firefox" },
+    { name = "*.odt", use = "libreoffice-writer" },
+
+    # Audio Files
+    { name = "*.wav", use = "mpv" },
+    { name = "*.m4a", use = "mpv" },
+
+    # Video Files
+    { name = "*.mkv", use = "mpv" },
+    { name = "*.mp4", use = "mpv" },
+    { name = "*.mpg", use = "mpv" },
+    
+    # Image Files
+    { name = "*.png", use = "viewnior" },
+    { name = "*.jpg", use = "viewnior" },
+
+    # Image Editing
+    { name = "*.xcf", use = "gimp" }
+
+]
+
+#______________________________________________________________________________

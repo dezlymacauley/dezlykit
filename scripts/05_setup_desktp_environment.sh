@@ -34,8 +34,18 @@ sudo pacman -S --needed rofi
 
 #______________________________________________________________________________
 
+# sudo pacman -S --needed viewnoir
+# sudo pacman -S --needed mpv
+# sudo pacman -S --needed xdg-desktop-portal-gtk
+# sudo pacman -S --needed xdg-desktop-portal-hyrpland
+# sudo pacman -S --needed hyprpaper
+# sudo pacman -S --needed hyprpolkitagent
+# sudo pacman -S --needed obs-studio
+# sudo pacman -S --needed kdenlive
+# sudo pacman -S --needed libreoffice-fresh
+
 desktop_environment_packages=(
-	
+
 	# Media Players
 	viewnior		# Image Viewer 
 	mpv 			# Video player
@@ -50,11 +60,12 @@ desktop_environment_packages=(
 	hyprpolkitagent
 
 	# Hyprland Tiling Window Manager Ecosystem
-	
+
 	# Content Creation Tools
-	obs-studio       	# Video recording
+	gimp			# Image editing
 	kdenlive         	# Video editing
 	libreoffice-fresh 	# Document viewing and creation
+	obs-studio       	# Video recording
 )
 
 sudo pacman -S --noconfirm --needed "${desktop_environment_packages[@]}"
