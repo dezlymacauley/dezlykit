@@ -11,6 +11,16 @@ vim.o.swapfile = false
 
 vim.o.number = true -- Show line numbers
 
+-- When you place your cursor on a line,
+-- this will show the current line number in a column on the left.
+-- The line numbers for the rest of the lines in your code will be shown 
+-- relative to the current line number.
+-- This makes it easier to jump to a specific line by typing:
+--
+-- The relative line number and k (if the line is above the current line).
+-- or the relative line number and j (if the line is below the current line)
+vim.o.relativenumber = true
+
 -- Text will stay on the same line no matter the size of the terminal
 vim.o.wrap = false
 
@@ -60,10 +70,15 @@ vim.o.signcolumn = "auto"
 -- up Neovim or when you are using a transparent background.
 -- To clean up the UI, use this line to replace all the eob characters
 -- with an empty space.
-vim.opt.fillchars:append({ eob = " " })
+vim.o.fillchars = "eob: "
 
 -- When using the command `:new`, Horizontal splits always open below
-vim.opt.splitbelow = true
+vim.o.splitbelow = true
 
 -- When using the command `:vnew`, Vertical splits always open on the right
-vim.opt.splitright = true
+vim.o.splitright = true
+
+-- This will add a verticla column on the right of the user interface
+-- to show me when the characters on a line are approaching 80 characters
+-- For code readability, I try to keep each line shorter than 80 characters.
+vim.o.colorcolumn = "80"

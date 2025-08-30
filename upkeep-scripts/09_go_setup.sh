@@ -18,4 +18,7 @@ echo
 LIVN_OF_GOLANG=$(vfox list golang | head -n1 | sed 's/.*v//')
 vfox use --global "golang@$LIVN_OF_GOLANG"
 
+# Install the language server for Go
+go install golang.org/x/tools/gopls@latest
+
 #______________________________________________________________________________

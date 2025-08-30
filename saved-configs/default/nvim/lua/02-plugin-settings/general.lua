@@ -1,4 +1,4 @@
--- Install plugins using Neovim's native plugin manager
+-- SECTION: Plugin Installation
 
 vim.pack.add({
 
