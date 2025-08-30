@@ -7,9 +7,9 @@ vim.keymap.set(
     { desc = "[n]ext buffer", silent = true }
 )
 
--- Ctrl + c
+-- <leader> key + c
 vim.keymap.set(
-    "n", "<C-c>",
+    "n", "<leader>c",
     ":bd<CR>",
     { desc = "[c]lose buffer", silent = true }
 )

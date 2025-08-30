@@ -10,19 +10,54 @@ require("01-core-settings.02_native_options")
 require("01-core-settings.03_enabled_lsps")
 
 --=============================================================================
--- SECTION: Load Plugin Settings
-
 -- Load ./lua/02-plugin-settings/general.lua
 require("02-plugin-settings.general")
+--=============================================================================
+-- SECTION: Load User Interface Plugins
 
--- Load ./lua/02-plugin-settings/01-user-interface/02_smear_cursor.lua
-require("02-plugin-settings.01-user-interface/02_smear_cursor")
-
+-- Load all .lua files from the directory:
+-- ./lua/02-plugin-settings/01-user-interface/
+for _, file in ipairs(vim.fn.glob(
+  vim.fn.stdpath("config")
+    .. "/lua/02-plugin-settings/01-user-interface/*.lua",
+  false,
+  true
+)) do
+  require(
+    file:match("lua/(.+)%.lua$"):gsub("/", ".")
+  )
+end
 
 --=============================================================================
+-- SECTION: Load Navigation tools
 
-require("03_custom_highlights")
-require("04_custom_transparency")
-require("05_custom_keymaps")
+-- Load all .lua files from the directory:
+-- ./lua/02-plugin-settings/02-navigation-tools/
+for _, file in ipairs(vim.fn.glob(
+  vim.fn.stdpath("config")
+    .. "/lua/02-plugin-settings/02-navigation-tools/*.lua",
+  false,
+  true
+)) do
+  require(
+    file:match("lua/(.+)%.lua$"):gsub("/", ".")
+  )
+end
+
+--=============================================================================
+-- SECTION: Load Programming tools
+
+-- Load all .lua files from the directory:
+-- ./lua/02-plugin-settings/03-programming-tools/
+for _, file in ipairs(vim.fn.glob(
+  vim.fn.stdpath("config")
+    .. "/lua/02-plugin-settings/03-programming-tools/*.lua",
+  false,
+  true
+)) do
+  require(
+    file:match("lua/(.+)%.lua$"):gsub("/", ".")
+  )
+end
 
 --=============================================================================

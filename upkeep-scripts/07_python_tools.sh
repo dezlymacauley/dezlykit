@@ -22,6 +22,9 @@ fi
 # It's part of the astral ecosystem
 uv tool install ruff
 
+# Language support for Python
+uv tool install basedpyright
+
 # A CLI for SQLite Databases with auto-completion and syntax highlighting
 uv tool install litecli
 

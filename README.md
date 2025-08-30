@@ -7,9 +7,18 @@ for AI Engineers and Polyglot Programmers
 _______________________________________________________________________________
 ## How to use
 
+First clone the repository
 ```sh
 git clone https://github.com/dezlymacauley/dezlykit.git $HOME/.config/dezlykit
+```
+
+Enter the directory
+```sh
 cd $HOME/.config/dezlykit
+```
+
+Run this command to install DezlyKit on your Arch Linux setup
+```sh
 ./dezlykit_upkeep.sh
 ```
 
