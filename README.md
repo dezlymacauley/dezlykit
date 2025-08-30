@@ -1,4 +1,4 @@
-# DezlyKit
+# ☯️ DezlyKit
 
 ## About
 A terminal-centric Arch + Hyprland + Neovim workflow 
