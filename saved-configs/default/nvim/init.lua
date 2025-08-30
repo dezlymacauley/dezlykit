@@ -1,17 +1,18 @@
 -- SECTION: Load Core Settings
 
--- Load ./lua/01-core-settings/01_keymap_settings.lua
-require("01-core-settings.01_keymap_settings")
+-- Load all .lua files from the directory:
+-- ./lua/01-core-settings/
+for _, file in ipairs(vim.fn.glob(
+  vim.fn.stdpath("config")
+    .. "/lua/01-core-settings/*.lua",
+  false,
+  true
+)) do
+  require(
+    file:match("lua/(.+)%.lua$"):gsub("/", ".")
+  )
+end
 
--- Load ./lua/01-core-settings/02_native_options.lua
-require("01-core-settings.02_native_options")
-
--- Load ./lua/01-core-settings/03_enabled_lsps.lua
-require("01-core-settings.03_enabled_lsps")
-
---=============================================================================
--- Load ./lua/02-plugin-settings/general.lua
-require("02-plugin-settings.general")
 --=============================================================================
 -- SECTION: Load User Interface Plugins
 

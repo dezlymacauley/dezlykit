@@ -1,4 +1,4 @@
--- ABOUT: Allows you to edit the contents of a directory like a file
+-- ABOUT: Provides syntax highlighting for various file types
 
 --=============================================================================
 -- Installation
@@ -11,14 +11,12 @@ vim.pack.add({
 -- Configuration
 
 require("nvim-treesitter.configs").setup({
-	-- I only want treesitter to install syntax highlighting for files listed,
-	-- specifically in `ensure_installed`
-  	auto_install = false,
 
 	-- If you want to know what is the file type of any file you want support
     -- for, open the file in Neovim, press `:` 
     -- to enter command mode and use this command:
 	-- `:echo &filetype`
+
 	ensure_installed = {
 		-- Low-Level Programming	
 		"c", "cpp", "rust", "zig",
@@ -37,7 +35,19 @@ require("nvim-treesitter.configs").setup({
         
         -- Data Formats and Configuration Files
         "csv", "toml"
-	}
+	},
+	
+    -- I only want treesitter to install syntax highlighting for files listed,
+	-- specifically in `ensure_installed`
+  	auto_install = false,
+    highlight = {
+        -- Without this line you will not get highlighting for treesitter.
+        enable = true,
+
+        -- This will disable the built-in highlighting from Neovim
+        -- to ensure that only treesitter highlighting is used.
+        additional_vim_regex_highlighting = false,
+    },
 
 })
 
