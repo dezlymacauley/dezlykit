@@ -1,8 +1,8 @@
 # View all of the options here
 # https://ghostty.org/docs/config/reference
 
-# Explicitly tells Ghostty that you are using bash as your shell
-shell-integration = bash
+# Explicitly tells Ghostty that you are using zsh as your shell
+shell-integration = zsh 
 
 # When you create a new tab it will open in the same directory that
 # ghostty was launched from.
