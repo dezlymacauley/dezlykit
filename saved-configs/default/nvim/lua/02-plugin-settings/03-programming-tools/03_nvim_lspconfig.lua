@@ -85,38 +85,37 @@ vim.lsp.enable({
   
     -- AI Engineering
     "basedpyright",                     -- Python (.py)
+    "moji",                             -- Mojo (.mojo)
+  
+    -- Backend Servers
+    "gopls",                            -- Go (.go)
+
+    -- Data formats
+    "jsonls",                           -- JSON (.json)
+
+    -- Low-Level Programming
+    "clangd",                           -- C (.c), C++ (.cpp)
+    "rust_analyzer",                    -- Rust (.rs)
+    "zls",                              -- Zig (.zig)
 
     -- UX Design (Web & Mobile):
-    -- "ts_ls",                            -- JavaScript (.js)
+    "cssls",                            -- CSS (.css)
+
+    "eslint",                           -- JavaScript (.js)
                                         -- JavaScript React (.jsx)
                                         -- TypeScript (.tx)
                                         -- TypeScript React (.tsx)
 
-  -- Low-Level Systems Programmer
-  -- "clangd",                             -- C (.c), C++ (.cpp)
-  -- "rust_analyzer",                      -- Rust (.rs)
-  -- "zig",                                -- Zig (.zig)
+    "html",                             -- HTML (.html)
+    "svelte",                           -- Svelte (.svelte)
+  
+    "tailwindcss",                      -- Any file 
+                                        -- that contains Tailwind classes.
 
-  -- Go Developer 
-  -- "gopls",                              -- Go (.go)
-
-  -- Smart Contract Development
-  -- "solidity_ls_nomicfoundation",        -- Solidity (.sol)
-
-  -- Svelte / SvelteKit Developer
-  -- "cssls",                              -- CSS (.css)
-  -- "html",                               -- HTML (.html)
-  -- "tailwindcss",                        -- Any file 
-  --                                       -- that contains Tailwind classes.
-  -- "jsonls",                             -- JSON (.json)
-  -- "svelte",                             -- Svelte (.svelte)
-
-
-                       -- "bashls",                         -- Bash (.sh)
-
-  -- "just",                           -- Just (justfile)
-  -- "lua_ls",                         -- Lua (.lua)
-  -- "yamlls",                         -- YAML (.yml)
+    "ts_ls",                            -- JavaScript (.js)
+                                        -- JavaScript React (.jsx)
+                                        -- TypeScript (.tx)
+                                        -- TypeScript React (.tsx)
 })
 
 --=============================================================================
