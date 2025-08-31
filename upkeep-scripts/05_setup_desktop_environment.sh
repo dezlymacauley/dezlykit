@@ -7,6 +7,14 @@ sudo pacman -S --needed wl-clipboard
 sudo pacman -S --needed wl-clip-persist
 
 #______________________________________________________________________________
+
+sudo pacman -S --needed nwg-look # Allows you to set themes for GUI apps
+sudo pacman -S --needed materia-gtk-theme # A theme for GUI applications
+
+sudo pacman -S --neeed qt5-wayland # Wayland support for qt5-applications
+sudo pacman -S --needed qt6-wayland # Wayland support for qt6-applications
+
+#______________________________________________________________________________
 # Notification Manager
 
 sudo pacman -S --needed swaync
@@ -34,6 +42,11 @@ sudo pacman -S --needed pavucontrol
 sudo pacman -S --needed rofi
 
 #______________________________________________________________________________
+# Lock Screen
+
+sudo pacman -S --needed hyprlock
+
+#______________________________________________________________________________
 
 # sudo pacman -S --needed viewnoir
 # sudo pacman -S --needed mpv
@@ -52,7 +65,11 @@ desktop_environment_packages=(
 	mpv 			# Video player
 
 	# Desktop Portals
+   
+    # Used by GTK apps to show file pickers and dialogs via portal
 	xdg-desktop-portal-gtk
+
+    # Lets apps access Wayland features like screensharing in Hyprland
 	xdg-desktop-portal-hyprland
 
 	# Hyprland Tiling Window Manager Ecosystem

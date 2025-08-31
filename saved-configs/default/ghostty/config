@@ -2,7 +2,7 @@
 # https://ghostty.org/docs/config/reference
 
 # Explicitly tells Ghostty that you are using zsh as your shell
-shell-integration = zsh 
+shell-integration = zsh
 
 # When you create a new tab it will open in the same directory that
 # ghostty was launched from.
@@ -18,7 +18,7 @@ keybind = alt+c=close_window
 background = 000000
 
 # Select a number between 0.00 and 1
-background-opacity = 0.85
+background-opacity = 0.75
 
 cursor-color = #00ffbc
 
