@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # Install build requirements
-sudo pacman -S --needed base-devel git
+sudo pacman -S --needed base-devel
+sudo pacman -S --needed git
 
 # Create the source-built packages directory if it doesn't exist
 mkdir -p "$HOME/.src-built-pkgs"
