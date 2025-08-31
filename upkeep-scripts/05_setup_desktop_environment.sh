@@ -17,6 +17,7 @@ sudo pacman -S --needed swaync
 sudo pacman -S --needed noto-fonts
 sudo pacman -S --needed noto-fonts-emoji
 sudo pacman -S --needed noto-fonts-cjk
+sudo pacman -S --needed noto-fonts-extra 
 
 #______________________________________________________________________________
 # Web browser

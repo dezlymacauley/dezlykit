@@ -22,6 +22,7 @@ echo
 # Install all of the required packages
 
 echo
+
 (source upkeep-scripts/01_setup_paru_aur_helper.sh)
 (source upkeep-scripts/02_perform_system_update.sh)
 (source upkeep-scripts/03_setup_terminal.sh)
@@ -33,6 +34,8 @@ echo
 (source upkeep-scripts/09_go_setup.sh)
 (source upkeep-scripts/10_zig_setup.sh)
 (source upkeep-scripts/11_javascript_tools.sh)
+(source upkeep-scripts/12_battery_life.sh)
+
 echo
 
 #______________________________________________________________________________
