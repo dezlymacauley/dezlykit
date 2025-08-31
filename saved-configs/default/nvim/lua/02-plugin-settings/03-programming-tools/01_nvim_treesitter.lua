@@ -30,11 +30,13 @@ require("nvim-treesitter.configs").setup({
 		-- UX Design
 		"css", "html", "javascript", "tsx", "typescript", "svelte",
 
-        -- General Purpose
+        -- Scripting
         "bash", "lua",
         
         -- Data Formats and Configuration Files
         "csv", "toml"
+
+-- markdown and markdown_inline
 	},
 	
     -- I only want treesitter to install syntax highlighting for files listed,

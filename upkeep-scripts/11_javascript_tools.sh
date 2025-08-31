@@ -35,6 +35,19 @@ bun install --global typescript-language-server
 bun install --global svelte-language-server
 echo
 
+# This is a collection of language servers that have been extracted
+# from the code editor Visual Studio Code. 
+# It includes the following:
+#
+#  - vscode-css-language-server
+#  - vscode-eslint-language-server
+#  - vscode-html-language-server
+#  - vscode-json-language-server
+#  - vscode-markdown-language-server
+bun install -g vscode-langservers-extracted
+bun pm trust
+echo
+
 # Language support for files containing Tailwind CSS classes.
 bun install --global @tailwindcss/language-server 
 echo

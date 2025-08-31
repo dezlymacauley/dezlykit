@@ -89,7 +89,9 @@ sudo pacman -S --needed git
 _______________________________________________________________________________
 #### Step 2: Clone the `DezlyKit` repository
 ```sh
-git clone https://github.com/dezlymacauley/dezlykit.git $HOME/.config/dezlykit
+git clone --depth 1 \
+https://github.com/dezlymacauley/dezlykit.git \
+$HOME/.config/dezlykit
 ```
 _______________________________________________________________________________
 #### Step 3: Load the default `DezlyKit` configurations

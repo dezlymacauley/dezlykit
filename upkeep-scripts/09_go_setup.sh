@@ -21,4 +21,8 @@ vfox use --global "golang@$LIVN_OF_GOLANG"
 # Install the language server for Go
 go install golang.org/x/tools/gopls@latest
 
+# Language support for SQL files
+go install github.com/sqls-server/sqls@latest
+echo
+
 #______________________________________________________________________________

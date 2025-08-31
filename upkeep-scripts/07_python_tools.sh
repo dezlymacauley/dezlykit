@@ -18,9 +18,29 @@ if ! command -v uv >/dev/null 2>&1; then
     echo
 fi
 
+#______________________________________________________________________________
+
 # An extremely fast Python linter and code formatter, written in Rust.
 # It's part of the astral ecosystem
-uv tool install ruff
+if ! command -v ruff >/dev/null 2>&1; then
+
+    echo "ruff is not installed"
+    echo
+
+    echo "Installing ruff..."
+    echo
+
+    uv tool install ruff
+    echo
+else
+
+    echo "Updating ruff..."
+    echo
+
+    uv tool update ruff
+    echo
+fi
+#______________________________________________________________________________
 
 # Language support for Python
 uv tool install basedpyright

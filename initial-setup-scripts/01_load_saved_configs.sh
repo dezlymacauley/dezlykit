@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-echo "Hey"
+echo "Loading default DezlyKit configurations"
+echo
