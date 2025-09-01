@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
 
 #______________________________________________________________________________
-# Clipboard Manager
+# Clipboard Functionality
 
+# Adds clipboard functionality to Wayland
 sudo pacman -S --needed wl-clipboard
+
+# A Wayland clipboard manager
+sudo pacman -S --needed cliphist 
+
+# Ensures that copied data remains in the clipboard after an application
+# has been closed.
 sudo pacman -S --needed wl-clip-persist
 
 #______________________________________________________________________________
@@ -45,6 +52,18 @@ sudo pacman -S --needed rofi
 # Lock Screen
 
 sudo pacman -S --needed hyprlock
+
+#______________________________________________________________________________
+# Screen shots
+
+sudo pacman -S --needed hyprshot 
+
+# Hypr picker is actually for selecting colours from your screen
+# but it has the ability to freeze the screen while you make a selection.
+#
+# This `--freeze` flag can then be used by hyprshot to freeze your screen 
+# while you are selecting the area your want to capture as a screenshot
+sudo pacman -S --needed hyprpicker
 
 #______________________________________________________________________________
 
