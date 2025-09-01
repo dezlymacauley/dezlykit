@@ -1,19 +1,30 @@
 --=============================================================================
 
+-- This remaps `Ctrl + c` to the `Esc` keep so that I don't see the message
+-- `Type :qa and press <Enter> to exit Nvim` when I press `Ctrl + c` twice
+-- to exit normal mode.
+
+vim.keymap.set(
+    "n", "<C-c>", 
+    "<Esc>", 
+    { noremap = true, silent = true }
+)
+
+
 -- SECTION: Native Keymaps => Buffer Navigation 
 
 -- Ctrl + n
 vim.keymap.set(
     "n", "<C-n>",
     ":bn<CR>",
-    { desc = "[n]ext buffer", silent = true }
+    { desc = "[n]ext buffer", noremap = true, silent = true }
 )
 
 -- <leader> key + c
 vim.keymap.set(
     "n", "<leader>c",
     ":bd<CR>",
-    { desc = "[c]lose buffer", silent = true }
+    { desc = "[c]lose buffer", noremap = true, silent = true }
 )
 
 --=============================================================================
@@ -28,7 +39,7 @@ vim.keymap.set(
     .. ":terminal<CR>"
     .. ":setlocal nonumber norelativenumber<CR>"
     .. "i",
-    { desc = "[t]erminal", silent = true }
+    { desc = "[t]erminal", noremap = true, silent = true }
 )
 
 -- Alt + e
@@ -38,7 +49,7 @@ vim.keymap.set(
 vim.keymap.set(
     "t", "<M-e>",
     "<C-\\><C-n><C-w>w",
-    { desc = "[e]xit the terminal and return to your code", silent = true }
+    { desc = "[e]xit terminal mode", noremap = true, silent = true }
 )
 
 --=============================================================================
@@ -48,28 +59,28 @@ vim.keymap.set(
 vim.keymap.set(
     "n", "<C-h>", 
     "<C-w><C-h>", 
-    { desc = "Move focus to the window on the left", silent = true }
+    { desc = "Move focus to the window on the left", noremap = true, silent = true }
 )
 
 -- Ctrl + j
 vim.keymap.set(
     "n", "<C-j>", 
     "<C-w><C-j>", 
-    { desc = "Move focus to the window below", silent = true }
+    { desc = "Move focus to the window below", noremap = true, silent = true }
 )
 
 -- Ctrl + k
 vim.keymap.set(
     "n", "<C-k>", 
     "<C-w><C-k>", 
-    { desc = "Move focus to the window above", silent = true }
+    { desc = "Move focus to the window above", noremap = true, silent = true }
 )
 
 -- Ctrl + l
 vim.keymap.set(
     "n", "<C-l>", 
     "<C-w><C-l>", 
-    { desc = "Move focus to the window on the right", silent = true }
+    { desc = "Move focus to the window on the right", noremap = true, silent = true }
 )
 
 --=============================================================================
@@ -79,7 +90,7 @@ vim.keymap.set(
 vim.keymap.set(
 	"n", "<leader>fe", 
     ":Oil<CR>",
-	{ desc = "[f]ile [e]xplorer", silent = true }
+	{ desc = "[f]ile [e]xplorer", noremap = true, silent = true }
 ) 
 
 --=============================================================================

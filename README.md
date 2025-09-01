@@ -1,8 +1,9 @@
 # ☯️ DezlyKit
 
 ## About
-A terminal-centric Arch Linux + Hyprland + Neovim workflow 
-for AI Engineers and Polyglot Programmers 
+An opinionated terminal-centric workflow for AI Engineers 
+and Polyglot Programmers. It uses 3 core technologies:
+Arch Linux, Hyprland, and Neovim.
 
 _______________________________________________________________________________
 ## License
@@ -97,8 +98,38 @@ _______________________________________________________________________________
 #### Step 3: Load the default `DezlyKit` configurations
 
 ```sh
-
-/009   01_zsh.sh
+cd $HOME/.config/dezlykit
+./initial_setup.sh
 ```
-_______________________________________________________________________________
 
+You will need to restart your system after this so that `ZSH` 
+and `Version Fox` work properly.
+
+NOTE:
+1. This script should only be used once.
+2. This script assumes that you are starting from a clean slate,
+minimall install (no desktop environment) Arch Linux.
+
+_______________________________________________________________________________
+#### Step 4: Install the required packages
+
+```sh
+cd $HOME/.config/dezlykit
+./upkeep_dezlykit.sh
+```
+Note: I have designed this script to be idempotent. This means that you can
+run this script repeatedly. 
+
+It is used to install required packages, update your system, 
+and provide you with the option to back up your configuration.
+
+_______________________________________________________________________________
+#### Step 5: Enter Hyprland
+
+First login into Arch Linux, then simply type:
+
+```sh
+Hyprland
+```
+
+_______________________________________________________________________________
