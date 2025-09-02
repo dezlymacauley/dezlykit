@@ -9,20 +9,20 @@
 # That backup will then replace the configuration for that specific program
 # in the directory below.
 DEFAULT_SAVED_CONFIGS="$HOME/.config/dezlykit/saved-configs/default"
+echo
 
 #______________________________________________________________________________
 # SECTION: Ghostty
 
 if [[ ! -d "$HOME/.config/ghostty/" ]]; then
-    echo
 	echo "No custom ghostty configuration was found"
 	echo
 
 	echo "A default configuration will be loaded from DezlyKit/saved-configs"
     cp -r "$DEFAULT_SAVED_CONFIGS/ghostty/" "$HOME/.config/"
+    echo "================================================================"
     echo
 else
-    echo
 	echo "👻 DezlyKit has detected your existing ghostty configuration."
 	echo
 
@@ -50,6 +50,7 @@ else
 
 	    echo
 	    echo "Your current ghostty configuration has been saved to DezlyKit"
+        echo "================================================================"
         echo
 	fi
 
@@ -59,15 +60,13 @@ fi
 # SECTION: Hyprland
 
 if [[ ! -d "$HOME/.config/ghostty/" ]]; then
-    echo
 	echo "No custom Hyprland configuration was found"
-	echo
 
 	echo "A default configuration will be loaded from DezlyKit/saved-configs"
     cp -r "$DEFAULT_SAVED_CONFIGS/hypr/" "$HOME/.config/"
+    echo "================================================================"
     echo
 else
-    echo
 	echo "💧 DezlyKit has detected your existing Hyprland configuration."
 	echo
 
@@ -95,6 +94,7 @@ else
 
 	    echo
 	    echo "Your current Hyprland configuration has been saved to DezlyKit"
+        echo "================================================================"
         echo
 	fi
 
@@ -104,15 +104,14 @@ fi
 # SECTION: mpv
 
 if [[ ! -d "$HOME/.config/mpv/" ]]; then
-    echo
 	echo "No custom mpv configuration was found"
 	echo
 
 	echo "A default configuration will be loaded from DezlyKit/saved-configs"
+    echo "================================================================"
     cp -r "$DEFAULT_SAVED_CONFIGS/mpv/" "$HOME/.config/"
     echo
 else
-    echo
 	echo "▶️ DezlyKit has detected your existing mpv configuration."
 	echo
 
@@ -140,9 +139,147 @@ else
 
 	    echo
 	    echo "Your current mpv configuration has been saved to DezlyKit"
+        echo "================================================================"
         echo
 	fi
 
 fi
 
 #______________________________________________________________________________
+# SECTION: Neovim
+
+if [[ ! -d "$HOME/.config/nvim/" ]]; then
+	echo "No custom Neovim configuration was found"
+    echo "================================================================"
+	echo
+
+	echo "A default configuration will be loaded from DezlyKit/saved-configs"
+    cp -r "$DEFAULT_SAVED_CONFIGS/nvim/" "$HOME/.config/"
+    echo
+else
+	echo "⌨️ DezlyKit has detected your existing Neovim configuration."
+	echo
+
+	backup_neovim=""
+	
+        while [[ "$backup_neovim" != "y" && "$backup_neovim" != "n" ]]; do
+	    read -p "Backup Neovim config? (y / n) " backup_neovim
+
+         if [[ "$backup_neovim" != "y" && "$backup_neovim" != "n" ]]; then
+             echo "Invalid response. Please enter y or n."
+         fi
+
+	done
+
+	# If the user selected yes then replace the default dezlykit config 
+	# with the user's current configuration.
+
+	if [[ "$backup_neovim" == "y" ]]; then
+        # Delete the default config saved in DezlyKit
+	    rm -rf "$DEFAULT_SAVED_CONFIGS/nvim/"
+
+        # Replace the default DezlyKit config with the user's current 
+        # configuration.
+	    cp -r "$HOME/.config/nvim/" "$DEFAULT_SAVED_CONFIGS"
+
+	    echo
+	    echo "Your current Neovim configuration has been saved to DezlyKit"
+        echo "================================================================"
+        echo
+	fi
+
+fi
+
+#______________________________________________________________________________
+# SECTION: Rofi
+
+if [[ ! -d "$HOME/.config/rofi/" ]]; then
+	echo "No custom Rofi configuration was found"
+    echo "================================================================"
+	echo
+
+	echo "A default configuration will be loaded from DezlyKit/saved-configs"
+    cp -r "$DEFAULT_SAVED_CONFIGS/rofi/" "$HOME/.config/"
+    echo
+else
+	echo "🚀 DezlyKit has detected your existing Rofi configuration."
+	echo
+
+	backup_rofi=""
+	
+        while [[ "$backup_rofi" != "y" && "$backup_rofi" != "n" ]]; do
+	    read -p "Backup Rofi config? (y / n) " backup_rofi
+
+         if [[ "$backup_rofi" != "y" && "$backup_rofi" != "n" ]]; then
+             echo "Invalid response. Please enter y or n."
+         fi
+
+	done
+
+	# If the user selected yes then replace the default dezlykit config 
+	# with the user's current configuration.
+
+	if [[ "$backup_rofi" == "y" ]]; then
+        # Delete the default config saved in DezlyKit
+	    rm -rf "$DEFAULT_SAVED_CONFIGS/rofi/"
+
+        # Replace the default DezlyKit config with the user's current 
+        # configuration.
+	    cp -r "$HOME/.config/rofi/" "$DEFAULT_SAVED_CONFIGS"
+
+	    echo
+	    echo "Your current Rofi configuration has been saved to DezlyKit"
+        echo "================================================================"
+        echo
+	fi
+
+fi
+
+#______________________________________________________________________________
+# SECTION: Yazi
+
+if [[ ! -d "$HOME/.config/yazi/" ]]; then
+	echo "No custom Yazi configuration was found"
+    echo "================================================================"
+	echo
+
+	echo "A default configuration will be loaded from DezlyKit/saved-configs"
+    cp -r "$DEFAULT_SAVED_CONFIGS/yazi/" "$HOME/.config/"
+    echo
+else
+	echo "🦆 DezlyKit has detected your existing Yazi configuration."
+	echo
+
+	backup_yazi=""
+	
+        while [[ "$backup_yazi" != "y" && "$backup_yazi" != "n" ]]; do
+	    read -p "Backup Yazi config? (y / n) " backup_yazi
+
+         if [[ "$backup_yazi" != "y" && "$backup_yazi" != "n" ]]; then
+             echo "Invalid response. Please enter y or n."
+         fi
+
+	done
+
+	# If the user selected yes then replace the default dezlykit config 
+	# with the user's current configuration.
+
+	if [[ "$backup_yazi" == "y" ]]; then
+        # Delete the default config saved in DezlyKit
+	    rm -rf "$DEFAULT_SAVED_CONFIGS/yazi/"
+
+        # Replace the default DezlyKit config with the user's current 
+        # configuration.
+	    cp -r "$HOME/.config/yazi/" "$DEFAULT_SAVED_CONFIGS"
+
+	    echo
+	    echo "Your current Yazi configuration has been saved to DezlyKit"
+        echo "================================================================"
+        echo
+	fi
+
+fi
+
+#______________________________________________________________________________
+
+echo

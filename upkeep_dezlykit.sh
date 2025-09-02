@@ -19,7 +19,3 @@ source_all "upkeep-scripts/"
 echo
 
 #______________________________________________________________________________
-
-echo "Restart your system if this your first time running dezlykit_upkeep.sh"
-
-#______________________________________________________________________________
