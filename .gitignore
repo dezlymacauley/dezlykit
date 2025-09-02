@@ -1,0 +1,2 @@
+# All `.sh` files in this directory will be ignored.
+saved-configs/default/zsh/private-workflow/*.sh

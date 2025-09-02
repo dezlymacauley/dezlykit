@@ -85,7 +85,7 @@ vim.lsp.enable({
   
     -- AI Engineering
     "basedpyright",                     -- Python (.py)
-    "moji",                             -- Mojo (.mojo)
+    "mojo",                             -- Mojo (.mojo)
   
     -- Backend Servers
     "gopls",                            -- Go (.go)

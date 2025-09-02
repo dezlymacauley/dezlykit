@@ -1,16 +1,4 @@
 --=============================================================================
-
--- This remaps `Ctrl + c` to the `Esc` keep so that I don't see the message
--- `Type :qa and press <Enter> to exit Nvim` when I press `Ctrl + c` twice
--- to exit normal mode.
-
-vim.keymap.set(
-    "n", "<C-c>", 
-    "<Esc>", 
-    { noremap = true, silent = true }
-)
-
-
 -- SECTION: Native Keymaps => Buffer Navigation 
 
 -- Ctrl + n
