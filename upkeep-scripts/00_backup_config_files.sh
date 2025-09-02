@@ -202,7 +202,7 @@ if [[ ! -d "$HOME/.config/rofi/" ]]; then
     cp -r "$DEFAULT_SAVED_CONFIGS/rofi/" "$HOME/.config/"
     echo
 else
-	echo "🚀 DezlyKit has detected your existing Rofi configuration."
+	echo "🚪 DezlyKit has detected your existing Rofi configuration."
 	echo
 
 	backup_rofi=""
@@ -274,6 +274,50 @@ else
 
 	    echo
 	    echo "Your current Yazi configuration has been saved to DezlyKit"
+        echo "================================================================"
+        echo
+	fi
+
+fi
+
+#______________________________________________________________________________
+# SECTION: Starship
+
+if [[ ! -f "$HOME/.config/starship.toml" ]]; then
+	echo "No custom Starship configuration was found"
+    echo "================================================================"
+	echo
+
+	echo "A default configuration will be loaded from DezlyKit/saved-configs"
+    cp -r "$DEFAULT_SAVED_CONFIGS/starship.toml" "$HOME/.config/"
+    echo
+else
+	echo "🚀 DezlyKit has detected your existing Starship configuration."
+	echo
+
+	backup_starship=""
+	
+        while [[ "$backup_starship" != "y" && "$backup_starship" != "n" ]]; do
+	    read -p "Backup Starship config? (y / n) " backup_starship
+
+        if [[ "$backup_starship" != "y" && "$backup_starship" != "n" ]]; then
+             echo "Invalid response. Please enter y or n."
+        fi
+
+	done
+
+	# If the user selected yes then replace the default dezlykit config 
+	# with the user's current configuration.
+	if [[ "$backup_starship" == "y" ]]; then
+        # Delete the default config saved in DezlyKit
+	    rm -rf "$DEFAULT_SAVED_CONFIGS/starship.toml"
+
+        # Replace the default DezlyKit config with the user's current 
+        # configuration.
+	    cp -r "$HOME/.config/starship.toml" "$DEFAULT_SAVED_CONFIGS"
+
+	    echo
+	    echo "Your current Starship configuration has been saved to DezlyKit"
         echo "================================================================"
         echo
 	fi
