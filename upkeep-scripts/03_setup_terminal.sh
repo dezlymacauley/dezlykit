@@ -41,6 +41,9 @@ echo
 sudo pacman -S --needed yazi
 echo
 
+sudo pacman -S --needed unrar
+echo
+
 #______________________________________________________________________________
 # Install Neovim 
 # I have chosen to build from source so that I am always using the latest
