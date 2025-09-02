@@ -1,25 +1,37 @@
 #!/usr/bin/env bash
 #______________________________________________________________________________
+
+# This is where DezlyKit loads default configurations when it doesn't find
+# a configuration file for a program.
+#
+# If you have an existing configuration on your system, 
+# DezlyKit will ask if you want to make a backup. 
+# That backup will then replace the configuration for that specific program
+# in the directory below.
+DEFAULT_SAVED_CONFIGS="$HOME/.config/dezlykit/saved-configs/default"
+
+#______________________________________________________________________________
 # SECTION: Ghostty
 
 if [[ ! -d "$HOME/.config/ghostty/" ]]; then
-	echo "You do not have a ghostty configuration"
+    echo
+	echo "No custom ghostty configuration was found"
 	echo
 
-	echo "Loading the default DezlyKit ghostty config."
-	cp -r "$HOME/.config/dezlykit/saved-configs/default/ghostty/" "$HOME/.config/"
+	echo "A default configuration will be loaded from DezlyKit/saved-configs"
+    cp -r "$DEFAULT_SAVED_CONFIGS/ghostty/" "$HOME/.config/"
+    echo
 else
-
-	echo "An existing ghostty configuration was found"
+    echo
+	echo "👻 DezlyKit has detected your existing ghostty configuration."
 	echo
 
-	perform_backup_of_ghostty_config=""
+	backup_ghostty=""
+	
+        while [[ "$backup_ghostty" != "y" && "$backup_ghostty" != "n" ]]; do
+	read -p "Backup ghostty config? (y / n) " backup_ghostty
 
-	# Prompt the user until they enter `y` or `n`
-	while [[ "$perform_backup_of_ghostty_config" != "y" && "$perform_backup_of_ghostty_config" != "n" ]]; do
-	read -p "Would you like to backup your ghostty config? (y / n) " perform_backup_of_ghostty_config
-
-         if [[ "$perform_backup_of_ghostty_config" != "y" && "$perform_backup_of_ghostty_config" != "n" ]]; then
+         if [[ "$backup_ghostty" != "y" && "$backup_ghostty" != "n" ]]; then
              echo "Invalid response. Please enter y or n."
          fi
 
@@ -27,20 +39,21 @@ else
 
 	# If the user selected yes then replace the default dezlykit config 
 	# with the user's current configuration.
-	
-	if [[ "$perform_backup_of_ghostty_config" == "y" ]]; then
-	    # Remove the old default ghostty config
-	    rm -rf "$HOME/.config/dezlykit/saved-configs/default/ghostty/"
 
-	    # Copy the user's current nvim config as the new default
-	    cp -r "$HOME/.config/ghostty/" "$HOME/.config/dezlykit/saved-configs/default/"
+	if [[ "$backup_ghostty" == "y" ]]; then
+        # Delete the default config saved in DezlyKit
+	    rm -rf "$HOME/.config/dezlykit/saved-configs/default/ghostty/"
+	    rm -rf "$DEFAULT_SAVED_CONFIGS/ghostty/"
+
+        # Replace the default DezlyKit config with the user's current 
+        # configuration.
+	    cp -r "$HOME/.config/ghostty/" "$DEFAULT_SAVED_CONFIGS"
 
 	    echo
-	    echo "Your current ghostty configuration has replaced the default."
+	    echo "Your current ghostty configuration has been saved to DezlyKit"
+        echo
 	fi
+
 fi
-
-#______________________________________________________________________________
-
 
 #______________________________________________________________________________
