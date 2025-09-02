@@ -281,6 +281,59 @@ else
 fi
 
 #______________________________________________________________________________
+# SECTION: ZSH
+
+if [[ ! -f "$HOME/.zshrc" ]]; then
+	echo "No custom ZSH configuration was found"
+    echo "================================================================"
+	echo
+
+	echo "A default configuration will be loaded from DezlyKit/saved-configs"
+    # load the .zshrc file
+    cp -r "$DEFAULT_SAVED_CONFIGS/.zshrc" "$HOME"
+    
+    # load the zsh directory
+    cp -r "$DEFAULT_SAVED_CONFIGS/zsh/" "$HOME/.config/"
+    echo
+else
+	echo "🐚 DezlyKit has detected your existing ZSH configuration."
+	echo
+
+	backup_zsh=""
+	
+        while [[ "$backup_zsh" != "y" && "$backup_zsh" != "n" ]]; do
+	    read -p "Backup ZSH config? (y / n) " backup_zsh
+
+        if [[ "$backup_zsh" != "y" && "$backup_zsh" != "n" ]]; then
+             echo "Invalid response. Please enter y or n."
+        fi
+
+	done
+
+	# If the user selected yes then replace the default dezlykit config 
+	# with the user's current configuration.
+	if [[ "$backup_zsh" == "y" ]]; then
+
+        # Delete the default .zshrc config file saved in DezlyKit
+	    rm -rf "$DEFAULT_SAVED_CONFIGS/.zshrc"
+        
+        # Delete the default zsh directory saved in DezlyKit
+	    rm -rf "$DEFAULT_SAVED_CONFIGS/zsh/"
+
+        # Replace the default DezlyKit config with the user's current 
+        # configuration.
+	    cp -r "$HOME/.zshrc" "$DEFAULT_SAVED_CONFIGS"
+	    cp -r "$HOME/.config/zsh/" "$DEFAULT_SAVED_CONFIGS"
+
+	    echo
+	    echo "Your current ZSH configuration has been saved to DezlyKit"
+        echo "================================================================"
+        echo
+	fi
+
+fi
+
+#______________________________________________________________________________
 # SECTION: Starship
 
 if [[ ! -f "$HOME/.config/starship.toml" ]]; then
