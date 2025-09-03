@@ -85,7 +85,7 @@ vim.lsp.enable({
   
     -- AI Engineering
     "basedpyright",                     -- Python (.py)
-    "mojo",                             -- Mojo (.mojo)
+    -- "mojo",                             -- Mojo (.mojo)
   
     -- Backend Servers
     "gopls",                            -- Go (.go)
@@ -100,17 +100,16 @@ vim.lsp.enable({
 
     -- UX Design (Web & Mobile):
     "cssls",                            -- CSS (.css)
+    "html",                             -- HTML (.html)
+    "tailwindcss",                      -- Files containing Tailwind classes
 
+    -- JavaScript Frameworks
     "eslint",                           -- JavaScript (.js)
                                         -- JavaScript React (.jsx)
                                         -- TypeScript (.tx)
                                         -- TypeScript React (.tsx)
 
-    "html",                             -- HTML (.html)
     "svelte",                           -- Svelte (.svelte)
-  
-    "tailwindcss",                      -- Any file 
-                                        -- that contains Tailwind classes.
 
     "ts_ls",                            -- JavaScript (.js)
                                         -- JavaScript React (.jsx)

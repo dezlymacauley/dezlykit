@@ -20,10 +20,3 @@ shell_history_disable() {
 shell_reload() {
     exec zsh
 }
-
-# Safely remove an external drive
-safely_remove() {
-    sync
-    udiskie-umount "$1"
-    sync
-}

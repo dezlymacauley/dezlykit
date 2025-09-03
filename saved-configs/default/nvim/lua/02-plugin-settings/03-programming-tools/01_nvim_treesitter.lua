@@ -27,14 +27,23 @@ require("nvim-treesitter.configs").setup({
 		-- Backend Servers
 		"go", "gomod",
 
+        -- JavaScript Frameworks
+        "javascript", "tsx", "typescript", "svelte", "vue",
+
 		-- UX Design
-		"css", "html", "javascript", "tsx", "typescript", "svelte",
+		"css", "html", 
 
         -- Scripting
         "bash", "lua",
         
         -- Data Formats and Configuration Files
-        "csv", "toml"
+        "csv", "json", "json5", "jsonc", "toml",
+
+        -- Documentation
+        "markdown", "markdown_inline"
+
+-- JSON with comments (maintained by @WhyNotHugo)
+
 
 -- markdown and markdown_inline
 	},

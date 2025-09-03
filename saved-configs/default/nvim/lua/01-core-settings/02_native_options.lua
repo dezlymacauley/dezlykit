@@ -82,3 +82,6 @@ vim.o.splitright = true
 -- to show me when the characters on a line are approaching 80 characters
 -- For code readability, I try to keep each line shorter than 80 characters.
 vim.o.colorcolumn = "80"
+
+vim.o.autoindent = true
+vim.o.smartindent = true
