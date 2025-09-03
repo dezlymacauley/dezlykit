@@ -45,19 +45,10 @@ vfox use --global "bun@$LIVN_OF_BUN"
 #______________________________________________________________________________
 # Step 3: Install global JavaScript packages with Bun
 
-# Language support for TypeScript and `.tsx` files (TypeScript React).
-# Since TypeScript is a superset of JavaScript, 
-# it also supports JavaScript, and `.jsx` files (JavaScript React).
-# This langauage server is also required by the Svelte language server,
-# as Svelte files support TypeScript.
-#  Note: this language-server requires node.js to work
-bun install --global typescript-language-server
+# Always stick to `npm` for global installs because other package managers 
+# often have minor issues.
 
-# Language support for Svelte files
-bun install --global svelte-language-server
-echo
-
-# This is a collection of language servers that have been extracted
+# This is a collection of 5 language servers that have been extracted
 # from the code editor Visual Studio Code. 
 # It includes the following:
 #
@@ -67,12 +58,33 @@ echo
 #  - vscode-json-language-server
 #  - vscode-markdown-language-server
 #  Note: this language-server requires node.js to work
-bun install -g vscode-langservers-extracted
-bun pm trust
+# npm install --g vscode-langservers-extracted
+bun install --global --trust vscode-langservers-extracted
 echo
 
 # Language support for files containing Tailwind CSS classes.
-bun install --global @tailwindcss/language-server 
+bun install --global --trust @tailwindcss/language-server 
 echo
+
+# A superset of JavaScript with type checking
+bun install --global --trust typescript
+
+# Language support for TypeScript files
+bun install --global --trust typescript-language-server
+
+# Language support for Svelte files
+bun install --global --trust svelte-language-server
+echo
+
+# TypeScript support in Vue files
+# npm install -g @vtsls/language-server
+
+# Language support for Vue
+# It will automatically install this @emmetio/css-parser@
+# npm install --global @vue/language-server
+echo
+
+# List all of the globally installed Bun packages
+bun pm -g ls
 
 #______________________________________________________________________________

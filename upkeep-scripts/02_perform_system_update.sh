@@ -13,8 +13,9 @@ install_upgrade_arch_linux() {
 
     if [[ "$answer" == "y" ]]; then
 	echo
-	sudo pacman -Syu # Update all packages from the official Arch repository
-	sudo paru -Sua # Update all AUR packages
+	# sudo pacman -Syu # Update all packages from the official Arch repository
+	# sudo paru -Sua # Update all AUR packages
+    paru -Syu
     else
         echo "Arch Linux upgrade canceled."
 	echo
