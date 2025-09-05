@@ -20,3 +20,8 @@ shell_history_disable() {
 shell_reload() {
     exec zsh
 }
+
+upkeep_dezlykit() {
+    cd $HOME/.config/dezlykit/
+    ./upkeep_dezlykit.sh
+}

@@ -29,3 +29,17 @@ alias tree="tree -a --gitignore"
 alias dezlykit="cd $HOME/.config/dezlykit/ && nvim ."
 
 #______________________________________________________________________________
+
+# Edit Local configuration files
+
+alias edit_ghostty="cd $HOME/.config/ghostty/ && nvim ."
+alias edit_hyprland="cd $HOME/.config/hypr/ && nvim ."
+alias edit_neovim="cd $HOME/.config/nvim/ && nvim ."
+
+#______________________________________________________________________________
+
+# Add custom zsh settings
+
+alias zsh_private_workflow="cd $HOME/.config/zsh/private-workflow/ && nvim ."
+
+#______________________________________________________________________________

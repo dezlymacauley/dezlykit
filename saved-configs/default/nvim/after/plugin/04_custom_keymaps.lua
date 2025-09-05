@@ -1,4 +1,9 @@
 --=============================================================================
+-- Please note that the keymap `<leader>ff` is already taken.
+-- It is used to format files types in the directory:
+-- $HOME/.config/nvim/after/ftplugin
+
+--=============================================================================
 -- SECTION: Native Keymaps => Buffer Navigation 
 
 -- Ctrl + n
@@ -72,13 +77,53 @@ vim.keymap.set(
 )
 
 --=============================================================================
+
 -- SECTION: Plugin Keymaps => oil.nvim
---=============================================================================
 
 vim.keymap.set(
 	"n", "<leader>fe", 
     ":Oil<CR>",
 	{ desc = "[f]ile [e]xplorer", noremap = true, silent = true }
 ) 
+
+--=============================================================================
+
+-- SECTION: Plugin Keymaps => trouble.nvim
+
+vim.keymap.set(
+	"n", "<leader>d", 
+    ":Trouble diagnostics toggle filter.buf=0<CR>",
+	{ desc = "[d]iagnostics", noremap = true, silent = true }
+) 
+
+--=============================================================================
+
+-- SECTION: Plugin Keymaps => telescope.nvim
+
+local builtin = require("telescope.builtin")
+
+vim.keymap.set(
+    "n", "<leader>sf", 
+    builtin.find_files, 
+    { desc = "[s]earch for a [f]ile by name", noremap = true, silent = tre }
+)
+
+vim.keymap.set(
+    "n", "<leader>sw", 
+    builtin.live_grep, 
+    { desc = "[s]earch for a [w]ord in a file", noremap = true, silent = tre }
+)
+
+vim.keymap.set(
+    "n", "<leader>so", 
+    builtin.buffers, 
+    { desc = "[s]earch for an [o]pen file", noremap = true, silent = tre }
+)
+
+vim.keymap.set(
+    "n", "<leader>sh", 
+    builtin.help_tags, 
+    { desc = "[s]earch Telescope [h]elp docs", noremap = true, silent = tre }
+)
 
 --=============================================================================

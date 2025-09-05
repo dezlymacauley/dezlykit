@@ -86,3 +86,12 @@ mkdir -p "$HOME/.src-built-pkgs"
 )
 
 #______________________________________________________________________________
+
+# This is for the plugin telescope nvim
+# BurntSushi/ripgrep is required for 
+# live_grep and grep_string 
+# and is the first priority for find_files.
+
+sudo pacman -S --needed ripgrep
+
+#______________________________________________________________________________
