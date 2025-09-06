@@ -127,3 +127,22 @@ vim.keymap.set(
 )
 
 --=============================================================================
+
+-- SECTION: Plugin Keymaps => live-priview
+
+-- vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+-- vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+--
+-- vim.keymap.set(
+--     "n", "<leader>mo", 
+--     ":PeekOpen<CR>",
+--     { desc = "[m]arkdown [o]pen", noremap = true, silent = tre }
+-- )
+--
+-- vim.keymap.set(
+--     "n", "<leader>mc", 
+--     ":PeekClose<CR>",
+--     { desc = "[m]arkdown [c]lose", noremap = true, silent = tre }
+-- )
+--
+--=============================================================================

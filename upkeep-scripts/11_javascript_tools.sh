@@ -22,6 +22,27 @@ LIVN_OF_NODEJS=$(vfox list nodejs | head -n1 | sed 's/.*v//')
 vfox use --global "nodejs@$LIVN_OF_NODEJS"
 
 #______________________________________________________________________________
+# Step 2: Install Deno
+
+# Install the version fox plugin for Deno
+# This allows version fox to manage multiple versions of Deno
+vfox add deno
+echo
+
+# Update the Deno plugin
+vfox update deno
+echo
+
+# Install the latest version of Bun
+vfox install deno@latest
+echo
+
+# This will get the number of the LIVN (Latest Installed Version Number) 
+# of bun
+LIVN_OF_DENO=$(vfox list deno | head -n1 | sed 's/.*v//')
+vfox use --global "deno@$LIVN_OF_DENO"
+
+#______________________________________________________________________________
 # Step 2: Install Bun
 
 # Install the version fox plugin for Bun

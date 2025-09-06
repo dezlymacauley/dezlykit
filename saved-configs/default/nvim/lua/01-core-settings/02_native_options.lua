@@ -61,7 +61,7 @@ vim.o.showmode = false
 
 -- "auto" will hide the sign column on the left of the line numbers 
 -- when there are no signs to show
-vim.o.signcolumn = "auto"
+vim.o.signcolumn = "yes"
 
 -- Neovim uses the character `~` to show that 
 -- you have reached the end of a file.
