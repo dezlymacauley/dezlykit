@@ -15,7 +15,8 @@ echo
 
 # This will get the number of the LIVN (Latest Installed Version Number) 
 # of zig
-LIVN_OF_ZIG=$(vfox list zig | head -n1 | sed 's/.*v//')
+
+LIVN_OF_ZIG=$(vfox list zig | grep -oP 'v\K[0-9]+\.[0-9]+\.[0-9]+' | sort -V | tail -n1)
 vfox use --global "zig@$LIVN_OF_ZIG"
 
 # Language support for zig in Neovim

@@ -15,7 +15,9 @@ echo
 
 # This will get the number of the LIVN (Latest Installed Version Number) 
 # of clang. 
-LIVN_OF_CLANG=$(vfox list clang | head -n1 | sed 's/.*v//')
+
+
+LIVN_OF_CLANG=$(vfox list clang | grep -oP 'v\K[0-9]+\.[0-9]+\.[0-9]+' | sort -V | tail -n1)
 vfox use --global "clang@$LIVN_OF_CLANG"
 
 # This is the clang package.
