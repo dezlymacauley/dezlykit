@@ -25,7 +25,7 @@ require("nvim-treesitter.configs").setup({
 		"python",
 
 		-- Backend Servers
-		"go", "gomod",
+		"go", "gomod", "gowork",
 
         -- JavaScript Frameworks
         "javascript", "tsx", "typescript", "svelte", "vue",
