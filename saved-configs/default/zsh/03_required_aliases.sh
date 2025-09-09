@@ -26,7 +26,7 @@ alias tree="tree -a --gitignore"
 
 #______________________________________________________________________________
 
-alias dezlykit="cd $HOME/.config/dezlykit/ && nvim ."
+alias dk="cd $HOME/.config/dezlykit/ && nvim ."
 
 #______________________________________________________________________________
 
