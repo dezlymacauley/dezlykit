@@ -1,3 +1,9 @@
+--[[
+
+https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lsp-configs
+
+--]]
+
 -- ABOUT: This is a `data only` plugin 
 -- So it does not NOT have a `require("nvim-lspconfig)` line.
 -- It used to in the past but that has been deprecated.
@@ -115,6 +121,7 @@ vim.lsp.enable({
                                         -- JavaScript React (.jsx)
                                         -- TypeScript (.tx)
                                         -- TypeScript React (.tsx)
+    "solidity_ls_nomicfoundation"
 })
 
 --=============================================================================

@@ -34,13 +34,16 @@ require("nvim-treesitter.configs").setup({
 		"css", "html", 
 
         -- Scripting
-        "bash", "lua",
+        "bash", "lua", "make",
         
         -- Data Formats and Configuration Files
         "csv", "json", "json5", "jsonc", "toml",
 
         -- Documentation
-        "markdown", "markdown_inline"
+        "markdown", "markdown_inline",
+
+        -- Web3
+        "solidity"
 
 -- JSON with comments (maintained by @WhyNotHugo)
 
