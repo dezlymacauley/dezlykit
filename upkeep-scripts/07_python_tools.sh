@@ -51,6 +51,9 @@ uv tool install litecli
 # CLI for Postgres Database. With auto-completion and syntax highlighting
 uv tool install pgcli
 
+# A CLI tool for testing APIs
+uv tool install httpie
+
 #______________________________________________________________________________
 # SECTION: Mojo (Python programming language)
 
