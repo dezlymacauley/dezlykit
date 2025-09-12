@@ -29,3 +29,16 @@ go install github.com/sqls-server/sqls@latest
 echo
 
 #______________________________________________________________________________
+# SECTION: gRPC setup for Go
+
+# https://grpc.io/docs/languages/go/quickstart/
+
+# Protocol Buffers - Google's data interchange format
+# This includes the compiler, protoc
+sudo pacman -S --needed protobuf 
+
+# Go plugins for the protocol compiler:
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+
+#______________________________________________________________________________

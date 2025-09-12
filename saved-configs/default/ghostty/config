@@ -8,11 +8,14 @@ shell-integration = zsh
 # ghostty was launched from.
 working-directory = inherit
 
-# NOTE: Alt + n = [n]ew tab
-keybind = alt+n=new_tab
+# Alt + o = [o]pen tab
+keybind = alt+o=new_tab
 
-# NOTE: Alt + c = [c]lose tab
+# Alt + c = [c]lose tab
 keybind = alt+c=close_window
+
+# Alt + n = [n]ext tab 
+keybind = alt+n=next_tab
 
 # Set the background colour to a solid black background
 background = 000000
@@ -36,5 +39,7 @@ font-size = 14
 
 font-family = "MesloLGM Nerd Font"
 
-# TODO: Create a keymap for cycling through tabs
-# keybind = alt+n=next_tab
+#  Use the background and foreground colors specified 
+# in the Ghostty configuration
+# Without this, the heading of a new tab will be transparent when using DezlyKit
+window-theme = ghostty

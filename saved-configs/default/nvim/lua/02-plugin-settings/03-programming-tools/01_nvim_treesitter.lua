@@ -24,8 +24,8 @@ require("nvim-treesitter.configs").setup({
 		-- AI Engineering
 		"python",
 
-		-- Backend Servers
-		"go", "gomod", "gowork",
+		-- Backend Services
+		"go", "gomod", "gowork", "proto",
 
         -- JavaScript Frameworks
         "javascript", "tsx", "typescript", "svelte", "vue",
@@ -44,6 +44,7 @@ require("nvim-treesitter.configs").setup({
 
         -- Web3
         "solidity"
+
 
 -- JSON with comments (maintained by @WhyNotHugo)
 
