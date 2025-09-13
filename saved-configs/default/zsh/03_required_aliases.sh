@@ -43,12 +43,3 @@ alias edit_neovim="cd $HOME/.config/nvim/ && nvim ."
 alias zsh_private_workflow="cd $HOME/.config/zsh/private-workflow/ && nvim ."
 
 #______________________________________________________________________________
-
-# Docker
-
-alias docker_start="sudo systemctl start docker"
-alias docker_status="sudo systemctl status docker"
-alias docker_stop="sudo systemctl stop docker"
-
-
-#______________________________________________________________________________

@@ -13,5 +13,12 @@ paru -S --needed autocpufreq
 # systemctl enable --now auto-cpufreq 
 sudo pacman -S --needed hyprpolkitagent
 
-# Start autocpufreq
-systemctl enable --now auto-cpufreq 
+#______________________________________________________________________________
+
+# Start autocpufreq and set it to automatically be active at boot.
+# systemctl enable --now auto-cpufreq 
+
+# NOTE: You only need to run the command above once, 
+# and then you can uncomment it.
+
+#______________________________________________________________________________
