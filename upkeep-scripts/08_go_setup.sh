@@ -21,12 +21,19 @@ LIVN_OF_GOLANG=$(vfox list golang | grep -oP 'v\K[0-9]+\.[0-9]+\.[0-9]+' | sort 
 # to use globally
 vfox use --global "golang@$LIVN_OF_GOLANG"
 
-# Install the language server for Go
+
+#______________________________________________________________________________
+# SECTION: Go-based language server
+
+# Language support for Go files 
 go install golang.org/x/tools/gopls@latest
 
 # Language support for SQL files
 go install github.com/sqls-server/sqls@latest
 echo
+
+# Language support for Docker files
+go install github.com/docker/docker-language-server/cmd/docker-language-server@latest
 
 #______________________________________________________________________________
 # SECTION: gRPC setup for Go
