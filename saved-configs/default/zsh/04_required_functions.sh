@@ -35,6 +35,18 @@ shell_reload() {
 }
 
 #______________________________________________________________________________
+# SECTION: Python
+
+# To use this:
+# `py main.py`
+
+# The flag `--no-error-summary` will ensure that mypy only displays a message
+# to the terminal when there is an error.
+py() {
+    mypy --no-error-summary "$1" && python "$1"
+}
+
+#______________________________________________________________________________
 # SECTION: Docker Management
 
 docker_status() {
@@ -55,6 +67,10 @@ docker_toggle() {
         sudo systemctl start docker.service docker.socket
         echo "🟢 Docker has been switched on"
     fi
+}
+
+docker_containers() {
+    docker ps -a --format "table {{.Image}}\t{{.Status}}\t{{.Ports}}\t{{.Names}}"
 }
 
 #______________________________________________________________________________

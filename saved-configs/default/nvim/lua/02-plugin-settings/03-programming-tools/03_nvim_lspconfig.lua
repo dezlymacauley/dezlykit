@@ -96,6 +96,7 @@ vim.lsp.enable({
     -- Backend Servers
     "gopls",                            -- Go (.go)
     "protols",                          -- Protocol Buffers (.proto)
+    "docker_language_server",           -- Docker File (Dockfile)
 
     -- Data formats
     "jsonls",                           -- JSON (.json)

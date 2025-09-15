@@ -54,6 +54,10 @@ uv tool install pgcli
 # A CLI tool for testing APIs
 uv tool install httpie
 
+# Instead of running your Python code with `python name_of_file.py`,
+# use `mypy name_of_file.py` to actually check for type errors.
+uv tool install mypy
+
 #______________________________________________________________________________
 # SECTION: Mojo (Python programming language)
 

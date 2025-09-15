@@ -41,7 +41,12 @@ echo
 sudo pacman -S --needed yazi
 echo
 
+# Extract .rar files
 sudo pacman -S --needed unrar
+echo
+
+# Extract .zip and .7z files
+sudo pacman -S --needed 7zip 
 echo
 
 #______________________________________________________________________________

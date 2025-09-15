@@ -14,5 +14,3 @@ setopt nullglob
 for file in "$HOME/.config/zsh/private-workflow/"*.sh; do
   source "$file"
 done
-
-# Can you see this

@@ -36,6 +36,10 @@ firefox = [
     { run = 'firefox "$@"', orphan = true, for = "unix" }
 ]
 
+google-chrome-stable = [
+    { run = 'google-chrome-stable "$@"', orphan = true, for = "unix" }
+]
+
 libreoffice-writer = [
     { run = 'libreoffice --writer "$@"', orphan = true, for = "unix" }
 ]
@@ -47,12 +51,12 @@ libreoffice-writer = [
 rules = [
 
     # Web Pages
-    { name = "*.html", use = "firefox" },
-    { name = "*.url", use = "firefox" },
+    { name = "*.html", use = "google-chrome-stable" },
+    { name = "*.url", use = "google-chrome-stable" },
 
     # Documentation Files
     { name = "*.md", use = "nvim" },
-    { name = "*.pdf", use = "firefox" },
+    { name = "*.pdf", use = "google-chrome-stable" },
     { name = "*.odt", use = "libreoffice-writer" },
 
     # Audio Files
