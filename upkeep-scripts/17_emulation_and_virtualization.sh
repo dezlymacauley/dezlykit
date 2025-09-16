@@ -14,6 +14,13 @@ sudo pacman -S --needed virt-manager
 # for an understanding of how things work.
 sudo pacman -S --needed libvirt
 
+# Lightweight DHCP and DNS server that provides networking services for VMs.
+# Creates virtual networks (like the "default" 192.168.122.x network) and
+# automatically assigns IP addresses to VMs so they can communicate with
+# each other and access the internet through NAT. Without this, VMs would
+# have no network connectivity unless manually configured.
+sudo pacman -S --needed dnsmasq
+
 #______________________________________________________________________________
 
 # NOTE: The package below take a long time to install so comment it out after

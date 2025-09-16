@@ -1,46 +1,20 @@
 # ☯️ DezlyKit
 
-## About
+## About 
 An opinionated terminal-centric workflow for AI Engineers 
-and Polyglot Programmers. It uses 3 core technologies:
-Arch Linux, Hyprland, and Neovim.
+and Polyglot Programmers. 
+
+It uses 3 core technologies:
+1. **Arch Linux**
+2. **Hyprland**
+3. **Neovim**
+
+<img src="00-readme-images/dezlykit_lock_screen.png" alt="Alt text" height="300" width="600" />
 
 _______________________________________________________________________________
 ## License
 
 DezlyKit is released under the BSD 3-Clause License
-_______________________________________________________________________________
-## Workflows Supported
-
-- Low-Level Programming:    
-    - 🦀 Rust
-    - ➕ C++
-    - 🦎 Zig
-    - 🇨 C (Comming Soon)
-
-- AI Engineering:           
-    - 🐍 Python
-    - 🔥 Mojo (Comming Soon)
-
-- Backend Servers:           
-    - 🐹 Go
-
-- UX Design (Web & Mobile):
-    - Web:
-        - ⚡ Bun
-        - 🟡 JavaScript
-        - 🔵 TypeScript
-        - 🔸 Svelte
-        - 🔶 SvelteKit
-        - ⚛️ React
-        - 🔳 Next.js
-        - 🎨 TailwindCSS
-        - 🎞️ GSAP
-
-    - Mobile:
-        - 📱 React Native
-        - 🍃 Nativewind
-
 _______________________________________________________________________________
 ## ⚠️ Warning: Users of NVidia Hardware
 
