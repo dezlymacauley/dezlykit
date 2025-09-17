@@ -17,6 +17,7 @@ require("nvim-treesitter.configs").setup({
     -- to enter command mode and use this command:
 	-- `:echo &filetype`
 
+-------------------------------------------------------------------------------
 	ensure_installed = {
 		-- Low-Level Programming	
 		"c", "cpp", "rust", "zig",
@@ -35,23 +36,17 @@ require("nvim-treesitter.configs").setup({
 
         -- Scripting
         "bash", "lua", "make",
-        
+
         -- Data Formats and Configuration Files
         "csv", "json", "json5", "jsonc", "toml",
 
         -- Documentation
         "markdown", "markdown_inline",
 
-        -- Web3
-        "solidity"
-
-
--- JSON with comments (maintained by @WhyNotHugo)
-
-
--- markdown and markdown_inline
 	},
-	
+
+-------------------------------------------------------------------------------
+
     -- I only want treesitter to install syntax highlighting for files listed,
 	-- specifically in `ensure_installed`
   	auto_install = false,
