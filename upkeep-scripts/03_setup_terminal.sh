@@ -23,6 +23,10 @@ sudo pacman -S --needed ttf-meslo-nerd
 sudo pacman -S --needed git
 echo
 
+# Required by git for certain commands
+sudo pacman -S --needed less
+echo
+
 sudo pacman -S --needed lsd
 echo
 
