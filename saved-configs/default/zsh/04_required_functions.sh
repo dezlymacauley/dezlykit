@@ -82,8 +82,8 @@ libvirt_status() {
     else
         echo "⚫ Libvirt is inactive"
     fi
-}
 
+}
 libvirt_toggle() {
     if systemctl is-active --quiet libvirtd.service; then
         # Stop service and sockets
