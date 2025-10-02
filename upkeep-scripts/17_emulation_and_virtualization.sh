@@ -33,3 +33,11 @@ sudo pacman -S --needed dnsmasq
 # into a 32-bit ARM executable. 
 
 #______________________________________________________________________________
+
+# Kubernetes CLI
+sudo pacman -S --needed kubectl
+
+# A tool that makes it easy to run Kubernetes locally
+sudo pacman -S --needed minikube
+
+#______________________________________________________________________________
