@@ -99,10 +99,8 @@ desktop_environment_packages=(
 	# Hyprland Tiling Window Manager Ecosystem
 
 	# Content Creation Tools
-	gimp			# Image editing
 	kdenlive         	# Video editing
 	libreoffice-fresh 	# Document viewing and creation
-	obs-studio       	# Video recording
 )
 
 sudo pacman -S --noconfirm --needed "${desktop_environment_packages[@]}"
