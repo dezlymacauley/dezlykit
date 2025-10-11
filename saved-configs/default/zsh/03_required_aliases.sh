@@ -22,7 +22,10 @@ alias ls="lsd"
 #______________________________________________________________________________
 # Shows all sub-directories and files, 
 # excluding the ones in the `.gitignore`
-alias tree="tree -a --gitignore"
+
+# This will show all files and directories that start with a dot.
+# However it will ignore the `.git` directory
+alias tree="tree -a -I '.git'"
 
 #______________________________________________________________________________
 
