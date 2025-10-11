@@ -1,5 +1,4 @@
 # Version Fox
-# eval "$(vfox activate zsh)"
 eval "$(vfox activate zsh)"
 
 # direnv
