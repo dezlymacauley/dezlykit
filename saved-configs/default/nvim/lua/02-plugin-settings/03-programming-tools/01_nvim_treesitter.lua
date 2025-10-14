@@ -38,7 +38,7 @@ require("nvim-treesitter.configs").setup({
         "bash", "lua", "make",
 
         -- Data Formats and Configuration Files
-        "csv", "json", "json5", "jsonc", "toml",
+        "csv", "json", "json5", "jsonc", "sql", "toml",
 
         -- Documentation
         "markdown", "markdown_inline",
