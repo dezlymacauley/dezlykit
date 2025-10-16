@@ -49,8 +49,8 @@ echo
 sudo pacman -S --needed unrar
 echo
 
-# Extract .zip and .7z files
-sudo pacman -S --needed 7zip 
+# Extract .7z files
+sudo pacman -S --needed 7zip
 echo
 
 #______________________________________________________________________________
