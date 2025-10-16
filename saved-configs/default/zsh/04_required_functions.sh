@@ -51,7 +51,7 @@ py() {
 
 docker_status() {
     if systemctl is-active --quiet docker.service; then
-        echo "🟢 Docker is active"
+        echo "🟣 Docker is active"
     else
         echo "⚫ Docker is inactive"
     fi
@@ -59,18 +59,38 @@ docker_status() {
 
 docker_toggle() {
     if systemctl is-active --quiet docker.service; then
-        # If Docker is active, shut it down.
+        # If Docker is active, deactivate it.
         sudo systemctl stop docker.service docker.socket
-        echo "⚫ Docker has been shutdown"
+        echo "⚫ Docker has been deactivated"
     else
-        # If Docker is inactive, switch it on.
+        # If Docker is inactive, activate it.
         sudo systemctl start docker.service docker.socket
-        echo "🟢 Docker has been switched on"
+        echo "🟣 Docker has been activated"
     fi
 }
 
-docker_containers() {
-    docker ps -a --format "table {{.Image}}\t{{.Status}}\t{{.Ports}}\t{{.Names}}"
+docker_images() {
+    docker image ls
+}
+
+docker_remove_all_images() {
+    docker rmi $(docker images -q)
+}
+
+docker_containers_status() {
+    docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"
+}
+
+docker_containers_ports() {
+    docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}"
+}
+
+docker_stop_all_containers() {
+    docker stop $(docker ps -q)
+}
+
+docker_remove_all_containers() {
+    docker rm $(docker ps -aq)
 }
 
 #______________________________________________________________________________

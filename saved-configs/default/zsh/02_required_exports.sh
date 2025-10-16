@@ -9,3 +9,7 @@ export PATH="$HOME/.bun/bin:$PATH"
 # This is where cargo (Rust) packages installed with either,
 # `cargo-binstall name-of-package` or `cargo install` will be saved to.
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# This will hide the loading and unloading messages when your enter a 
+# directory that has been configured to work with direnv
+export DIRENV_LOG_FORMAT=""
