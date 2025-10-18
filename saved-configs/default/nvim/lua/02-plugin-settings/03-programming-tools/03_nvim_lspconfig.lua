@@ -123,7 +123,6 @@ vim.lsp.enable({
                                         -- JavaScript React (.jsx)
                                         -- TypeScript (.tx)
                                         -- TypeScript React (.tsx)
-    "solidity_ls_nomicfoundation"
 })
 
 --=============================================================================
