@@ -3,6 +3,9 @@
 # Video recording Software
 sudo pacman -S --needed obs-studio       	
 
+# Background removal plugin for OBS
+paru -S --needed obs-backgroundremoval 
+
 # Thumbnail creation / Image editing software
 sudo pacman -S --needed gimp
 
