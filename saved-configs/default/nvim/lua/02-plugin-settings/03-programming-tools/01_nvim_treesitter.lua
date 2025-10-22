@@ -22,6 +22,9 @@ require("nvim-treesitter.configs").setup({
 		-- Low-Level Programming	
 		"c", "cpp", "rust", "zig",
 
+        -- Git
+        "git_config", "gitignore",
+
 		-- AI Engineering
 		"python",
 
@@ -38,7 +41,7 @@ require("nvim-treesitter.configs").setup({
         "bash", "lua", "make",
 
         -- Data Formats and Configuration Files
-        "csv", "json", "json5", "jsonc", "sql", "toml",
+        "csv", "json", "json5", "jsonc", "sql", "toml", "yaml",
 
         -- Documentation
         "markdown", "markdown_inline",
