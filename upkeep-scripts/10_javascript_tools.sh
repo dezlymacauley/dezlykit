@@ -27,7 +27,8 @@ vfox use --global "nodejs@$LIVN_OF_NODEJS"
 #______________________________________________________________________________
 # Step 2: Install Bun
 
-# WARNING: Don't install bun using vfox because `bunx` does not work.
+# WARNING: Don't use bun from vfox as your global version 
+# because `bunx` does not work.
 
 
 if command -v npm >/dev/null 2>&1; then
@@ -42,6 +43,21 @@ else
     echo "Bun will not be installed / updated."
     echo
 fi
+
+#______________________________________________________________________________
+
+# WARNING: Use Vfox for specific versions of Bun but NEVER set this globally
+
+# This is for project specific use
+
+# Install the version fox plugin for Bun
+# This allows version fox to manage multiple versions of Bun
+vfox add bun
+echo
+
+# Update the Bun plugin
+vfox update bun
+echo
 
 #______________________________________________________________________________
 # Step 3: Install global npm packages using Bun
