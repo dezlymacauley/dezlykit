@@ -22,9 +22,9 @@ sudo pacman -S --needed docker-buildx
 # SECTION: Kubernetes
 
 # Kubernetes CLI
-sudo pacman -S --needed kubectl
+# sudo pacman -S --needed kubectl
 
 # A tool that makes it easy to run Kubernetes locally
-sudo pacman -S --needed minikube
+# sudo pacman -S --needed minikube
 
 #______________________________________________________________________________

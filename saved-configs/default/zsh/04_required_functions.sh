@@ -73,6 +73,10 @@ docker_images() {
     docker image ls
 }
 
+docker_volumes() {
+    docker volume ls
+}
+
 docker_remove_all_images() {
     docker rmi $(docker images -q)
 }
