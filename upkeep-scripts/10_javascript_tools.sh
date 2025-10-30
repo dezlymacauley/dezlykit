@@ -30,34 +30,20 @@ vfox use --global "nodejs@$LIVN_OF_NODEJS"
 # WARNING: Don't use bun from vfox as your global version 
 # because `bunx` does not work.
 
+npm install --global bun@1.3.1
 
-if command -v npm >/dev/null 2>&1; then
-    echo
-    echo "npm is active on your Path."
-    echo "Bun will be installed / updated."
-    echo
-    npm install --global bun
-else
-    echo
-    echo "npm is not active on your Path."
-    echo "Bun will not be installed / updated."
-    echo
-fi
-
-#______________________________________________________________________________
-
-# WARNING: Use Vfox for specific versions of Bun but NEVER set this globally
-
-# This is for project specific use
-
-# Install the version fox plugin for Bun
-# This allows version fox to manage multiple versions of Bun
-vfox add bun
-echo
-
-# Update the Bun plugin
-vfox update bun
-echo
+# if command -v npm >/dev/null 2>&1; then
+#     echo
+#     echo "npm is active on your Path."
+#     echo "Bun will be installed / updated."
+#     echo
+#     npm install --global bun
+# else
+#     echo
+#     echo "npm is not active on your Path."
+#     echo "Bun will not be installed / updated."
+#     echo
+# fi
 
 #______________________________________________________________________________
 # Step 3: Install global npm packages using Bun
