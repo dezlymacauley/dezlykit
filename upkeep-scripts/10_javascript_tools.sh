@@ -113,6 +113,30 @@ else
 fi
 
 #______________________________________________________________________________
+# Step 1: Install Deno
+
+# Install the version fox plugin for Deno
+# This allows version fox to manage multiple versions of Deno
+vfox add deno
+echo
+
+# Update the Deno plugin
+vfox update deno
+echo
+
+# Install the latest version of Deno
+vfox install deno@latest
+echo
+
+# This will get the number of the LIVN (Latest Installed Version Number) 
+# of Deno
+LIVN_OF_DENO=$(vfox list deno | grep -oP 'v\K[0-9]+\.[0-9]+\.[0-9]+' | sort -V | tail -n1)
+
+# This will set that version as the global version of Deno to use on your
+# system.
+vfox use --global "deno@$LIVN_OF_DENO"
+
+#______________________________________________________________________________
 
 # Testing Web Browser
 
