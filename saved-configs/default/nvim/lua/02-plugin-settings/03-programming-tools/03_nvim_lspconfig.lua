@@ -119,9 +119,11 @@ vim.lsp.enable({
 
     "svelte",                           -- Svelte (.svelte)
 
-    "ts_ls",                            -- JavaScript (.js)
+    "denols",                           -- TypeScript (.ts)
+
+    -- "ts_ls",                            -- JavaScript (.js)
                                         -- JavaScript React (.jsx)
-                                        -- TypeScript (.tx)
+                                        -- TypeScript (.ts)
                                         -- TypeScript React (.tsx)
 })
 

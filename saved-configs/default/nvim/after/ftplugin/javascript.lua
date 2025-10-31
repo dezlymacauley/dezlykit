@@ -4,11 +4,12 @@ vim.bo.tabstop = 2
 vim.bo.softtabstop = 2
 vim.bo.shiftwidth = 2
 
+-- Format with Deno
 vim.keymap.set(
     "n",
     "<leader>ff",
     function()
-        vim.cmd("silent update | silent !prettier --write % | edit")
+        vim.cmd("silent update | silent !deno fmt % | edit")
     end,
     {
         desc = "[f]ormat [f]ile",
