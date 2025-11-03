@@ -6,6 +6,12 @@
 sudo pacman -S --needed acpi
 echo
 
+sudo pacman -S --needed zsh-syntax-highlighting
+echo
+
+sudo pacman -S --needed zsh-autosuggestions 
+echo
+
 sudo pacman -S --needed bat
 echo
 
