@@ -52,6 +52,8 @@ uv tool install httpie
 # use `mypy name_of_file.py` to actually check for type errors.
 uv tool install mypy
 
+uv tool install csvkit 
+
 #______________________________________________________________________________
 # SECTION: Mojo (Python programming language)
 
