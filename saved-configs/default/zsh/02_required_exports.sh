@@ -2,9 +2,9 @@
 # `uv tool install name-of-package` will be saved.
 export PATH="$HOME/.local/bin:$PATH"
 
-# This is where npm (JavaScript) packages installed with 
-# `bun install -g name-of-package` will be saved.
-# export PATH="$HOME/.bun/bin:$PATH"
+# This is where the binaries of npm (JavaScript) packages installed with 
+# `npm install -g name-of-package` will be saved:
+export PATH="$HOME/.npm-global-packages/bin:$PATH"
 
 # This is where cargo (Rust) packages installed with either,
 # `cargo-binstall name-of-package` or `cargo install` will be saved to.

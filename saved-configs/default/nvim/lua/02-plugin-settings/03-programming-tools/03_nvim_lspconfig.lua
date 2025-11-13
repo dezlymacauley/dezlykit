@@ -95,11 +95,11 @@ vim.lsp.enable({
   
     -- Backend Servers
     "gopls",                            -- Go (.go)
-    "protols",                          -- Protocol Buffers (.proto)
-    "docker_language_server",           -- Docker File (Dockfile)
+    -- "protols",                          -- Protocol Buffers (.proto)
+    -- "docker_language_server",           -- Docker File (Dockfile)
 
     -- Data formats
-    "jsonls",                           -- JSON (.json)
+    -- "jsonls",                           -- JSON (.json)
 
     -- Low-Level Programming
     "clangd",                           -- C (.c), C++ (.cpp)
@@ -107,12 +107,12 @@ vim.lsp.enable({
     "zls",                              -- Zig (.zig)
 
     -- UX Design (Web & Mobile):
-    "cssls",                            -- CSS (.css)
-    "html",                             -- HTML (.html)
+    -- "cssls",                            -- CSS (.css)
+    -- "html",                             -- HTML (.html)
     "tailwindcss",                      -- Files containing Tailwind classes
 
     -- JavaScript Frameworks
-    "eslint",                           -- JavaScript (.js)
+    -- "eslint",                           -- JavaScript (.js)
                                         -- JavaScript React (.jsx)
                                         -- TypeScript (.tx)
                                         -- TypeScript React (.tsx)
@@ -120,6 +120,8 @@ vim.lsp.enable({
     "svelte",                           -- Svelte (.svelte)
 
     "denols",                           -- TypeScript (.ts)
+
+    "intelephense"                      -- PHP (.php)
 
     -- "ts_ls",                            -- JavaScript (.js)
                                         -- JavaScript React (.jsx)
