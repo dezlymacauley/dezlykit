@@ -81,7 +81,15 @@ docker_remove_all_images() {
     docker rmi $(docker images -q)
 }
 
-docker_containers_status() {
+docker_remove_all_annoymous_volumes() {
+    docker volume prune
+}
+
+docker_volumes() {
+    docker volume ls
+}
+
+docker_containers() {
     docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"
 }
 
