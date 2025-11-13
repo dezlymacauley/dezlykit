@@ -4,7 +4,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # This is where npm (JavaScript) packages installed with 
 # `bun install -g name-of-package` will be saved.
-export PATH="$HOME/.bun/bin:$PATH"
+# export PATH="$HOME/.bun/bin:$PATH"
 
 # This is where cargo (Rust) packages installed with either,
 # `cargo-binstall name-of-package` or `cargo install` will be saved to.
