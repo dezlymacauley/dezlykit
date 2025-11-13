@@ -147,12 +147,20 @@ vim.keymap.set(
 --
 --=============================================================================
 
--- SECTION: Plugin => GitHub Preview
+-- SECTION: Plugin => Peek
 
 -- <leader> key + mo
--- vim.keymap.set(
---     "n", "<leader>mp",
---     ":GithubPreviewToggle<CR>",
---     { desc = "[m]arkdown [p]review", noremap = true, silent = true }
--- )
+vim.keymap.set(
+    "n", "<leader>mo",
+    ":PeekOpen<CR>",
+    { desc = "[m]arkdown [o]pen", noremap = true, silent = true }
+)
+
+-- <leader> key + mc
+vim.keymap.set(
+    "n", "<leader>mc",
+    ":PeekClose<CR>",
+    { desc = "[m]arkdown [c]lose", noremap = true, silent = true }
+)
+
 --=============================================================================
