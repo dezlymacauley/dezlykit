@@ -27,6 +27,9 @@ sudo pacman -S --needed cargo-binstall
 #______________________________________________________________________________
 # SECTION: Install global Rust packages with `cargo-binstall`
 
-cargo-binstall protols
+# cargo-binstall protols
+
+# To uninstall just use the regular cargo
+# cargo uninstall protols
 
 #______________________________________________________________________________
