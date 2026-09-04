@@ -16,6 +16,8 @@ pacman_install clang
 
 pacman_install cmake
 
+pacman_install ninja
+
 #______________________________________________________________________________
 
 # Download the vcpkg repo, and run the bootstrap script,
