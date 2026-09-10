@@ -1,10 +1,28 @@
 # DezlyKit
 _______________________________________________________________________________
 
-## Package Managers
+### External Package Managers
 _______________________________________________________________________________
 
-### 🍞 Bun
+#### 🧑‍🍳   Mise
+
+##### To uninstall unused mise tools 
+```bash
+mise prune
+```
+_______________________________________________________________________________
+
+#### 🐍 uv
+
+##### To clean the Python cache 
+
+This can save a signifficant amount of disk space
+```bash
+uv cache clean
+```
+_______________________________________________________________________________
+
+#### 🍞 Bun
 
 ##### To view a list of globally installed npm packages installed with Bun
 ```bash
