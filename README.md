@@ -1,11 +1,18 @@
 # DezlyKit
 _______________________________________________________________________________
 
-
+## Package Managers
 _______________________________________________________________________________
-# NOTE: Bun usage guide
 
-# To uninstall a program installed with bun:
-# bun uninstall --global name-of-package
+### 🍞 Bun
 
-# To view which programs with
+##### To view a list of globally installed npm packages installed with Bun
+```bash
+bun pm ls -g
+```
+
+##### To uninstall an npm package that was globally installed with Bun
+```bash
+bun uninstall --global name-of-package
+```
+_______________________________________________________________________________
