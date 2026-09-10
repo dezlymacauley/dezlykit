@@ -2,25 +2,18 @@
 
 #______________________________________________________________________________
 
-printf  "\n%s\n" "🦀 Rust Global Setup"
+printf "\n%s\n" "🐹 Go Global Setup"
 printf "%s\n\n" '___________________________________________________________'
 #______________________________________________________________________________
 
-# Installs the Rust toolchain manager
-sudo pacman -S --needed --noconfirm rustup
+# Installs the Go compiler 
+sudo pacman -S --needed --noconfirm go
 
 printf "%s\n\n" '___________________________________________________________'
 #______________________________________________________________________________
 
-if command -v rustup &>/dev/null; then
-
-    # Installs the toolchain called `stable`
-    rustup update stable
-    
-    rustup default stable
-
-    rustup component add --toolchain stable rust-analyzer
-fi
+# Installs the Go language server 
+sudo pacman -S --needed --noconfirm gopls
 
 printf "%s\n\n" '___________________________________________________________'
 #______________________________________________________________________________
