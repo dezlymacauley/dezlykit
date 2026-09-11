@@ -44,3 +44,17 @@ bun install --global --trust @astrojs/language-server
 
 printf "%s\n\n" '___________________________________________________________'
 #______________________________________________________________________________
+
+# Language support for the following file types:
+# .svelte
+bun install --global --trust @astrojs/language-server
+
+printf "%s\n\n" '___________________________________________________________'
+#______________________________________________________________________________
+
+# Language support for the following file types:
+# .svelte
+bun install --global --trust svelte-language-server
+
+printf "%s\n\n" '___________________________________________________________'
+#______________________________________________________________________________
