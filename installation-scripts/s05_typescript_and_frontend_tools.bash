@@ -2,7 +2,7 @@
 
 #______________________________________________________________________________
 
-printf "\n%s\n" "🎨 HTML and CSS Tools"
+printf "\n%s\n" "TypeScript and frontend tools"
 printf "%s\n\n" '___________________________________________________________'
 #______________________________________________________________________________
 
@@ -24,8 +24,23 @@ sudo pacman -S --needed --noconfirm bun
 printf "%s\n\n" '___________________________________________________________'
 #______________________________________________________________________________
 
-# Language support for HTML and CSS files
+# Language support for the following file types:
+# .html .css .json
 bun install --global --trust vscode-langservers-extracted
+
+printf "%s\n\n" '___________________________________________________________'
+#______________________________________________________________________________
+
+# Language support for the following file types:
+# .ts .js
+bun install --global --trust @vtsls/language-server
+
+printf "%s\n\n" '___________________________________________________________'
+#______________________________________________________________________________
+
+# Language support for the following file types:
+# .astro
+bun install --global --trust @astrojs/language-server
 
 printf "%s\n\n" '___________________________________________________________'
 #______________________________________________________________________________
