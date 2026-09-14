@@ -34,3 +34,17 @@ You view all valid options and the size of each download here
 https://ollama.com/library/llama3.2/tags
 ```
 _______________________________________________________________________________
+
+### To remove a downloaded model
+
+```bash
+ollama rm llama3.2:3b
+```
+_______________________________________________________________________________
+
+### To view details about a model
+
+```bash
+ollama show llama3.2:3b
+```
+_______________________________________________________________________________
