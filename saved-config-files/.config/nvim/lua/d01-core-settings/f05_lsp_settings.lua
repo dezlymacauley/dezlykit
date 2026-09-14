@@ -16,6 +16,9 @@ vim.lsp.enable("rust_analyzer")
 
 -- .c files and .cpp files
 vim.lsp.enable("clangd")
+
+-- CMakeLists.txt files
+vim.lsp.enable("cmake")
 -------------------------------------------------------------------------------
 
 -- SECTION: go-lab

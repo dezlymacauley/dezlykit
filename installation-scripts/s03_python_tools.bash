@@ -9,4 +9,5 @@ sudo pacman -S --needed --noconfirm ty
 sudo pacman -S --needed --noconfirm ruff
 
 # Language support for CMake files in C++ projects
-uv tool install cmake-language-server@latest
+uv tool install cmake-language-server@latest \
+          --with 'pygls<2'
