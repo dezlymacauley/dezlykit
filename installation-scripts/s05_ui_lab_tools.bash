@@ -2,7 +2,7 @@
 
 #______________________________________________________________________________
 
-printf "\n%s\n" "TypeScript and frontend tools"
+printf "\n%s\n" "🎨 UI Lab tools"
 printf "%s\n\n" '___________________________________________________________'
 #______________________________________________________________________________
 
@@ -40,13 +40,6 @@ printf "%s\n\n" '___________________________________________________________'
 
 # Language support for the following file types:
 # .astro
-bun install --global --trust @astrojs/language-server
-
-printf "%s\n\n" '___________________________________________________________'
-#______________________________________________________________________________
-
-# Language support for the following file types:
-# .svelte
 bun install --global --trust @astrojs/language-server
 
 printf "%s\n\n" '___________________________________________________________'
