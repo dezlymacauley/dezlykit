@@ -1,0 +1,3 @@
+[tools]
+aws-cli = { version = "latest", symlink_bins = "true" }
+"github:floci-io/floci-cli" = "latest"
