@@ -1,3 +1,8 @@
 [tools]
 aws-cli = { version = "latest", symlink_bins = "true" }
 "github:floci-io/floci-cli" = "latest"
+
+[shell_alias]
+run = "floci start && eval $(floci env)"
+floci-status= "floci status"
+stop = "floci stop"

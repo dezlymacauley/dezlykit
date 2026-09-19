@@ -26,3 +26,12 @@ aws-cli = { version = "latest", symlink_bins = "true" }
 "github:floci-io/floci-cli" = "latest"
 ```
 _______________________________________________________________________________
+
+Add these shell aliases to the `mise.toml` file
+```toml
+[shell_alias]
+run = "floci start && eval $(floci env)"
+floci-status= "floci status"
+stop = "floci stop"
+```
+_______________________________________________________________________________
