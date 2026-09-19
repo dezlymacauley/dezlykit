@@ -27,10 +27,20 @@ aws-cli = { version = "latest", symlink_bins = "true" }
 ```
 _______________________________________________________________________________
 
-Add these shell aliases to the `mise.toml` file
+Update your `mise.toml` file so that it looks like this
 ```toml
+[env]
+AWS_ENDPOINT_URL = "http://localhost.floci.io:4566"
+AWS_DEFAULT_REGION = "us-east-1"
+AWS_ACCESS_KEY_ID = "test"
+AWS_SECRET_ACCESS_KEY = "test"
+
+[tools]
+aws-cli = { version = "latest", symlink_bins = "true" }
+"github:floci-io/floci-cli" = "latest"
+
 [shell_alias]
-run = "floci start && eval $(floci env)"
+run = "floci start"
 floci-status= "floci status"
 stop = "floci stop"
 ```
