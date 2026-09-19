@@ -1,18 +1,21 @@
 # ☁️ Floci AWS Workflow
 _______________________________________________________________________________
 
+Create the directory and enter it
 ```bash
 mkdir floci-aws-workflow && cd floci-aws-workflow
 ```
 _______________________________________________________________________________
 
+Install the AWS CLI
 ```bash
 mise use aws-cli@latest  
 ```
 _______________________________________________________________________________
 
+Install the Floci CLI
 ```bash
-mise use "github:floci-io/floci-cli@latest"
+mise use github:floci-io/floci-cli@latest
 ```
 _______________________________________________________________________________
 
