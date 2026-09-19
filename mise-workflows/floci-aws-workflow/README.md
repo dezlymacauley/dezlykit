@@ -30,10 +30,17 @@ _______________________________________________________________________________
 Update your `mise.toml` file so that it looks like this
 ```toml
 [env]
+# AWS Settings
 AWS_ENDPOINT_URL = "http://localhost.floci.io:4566"
 AWS_DEFAULT_REGION = "us-east-1"
 AWS_ACCESS_KEY_ID = "test"
 AWS_SECRET_ACCESS_KEY = "test"
+
+# Floci Settings
+
+# Saves your changes without compromising speed
+FLOCI_STORAGE_MODE = "hybrid"               
+FLOCI_STORAGE_PERSISTENT_PATH = "./floci-aws-data"
 
 [tools]
 aws-cli = { version = "latest", symlink_bins = "true" }
