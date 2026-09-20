@@ -24,6 +24,12 @@ sudo pacman -S --needed --noconfirm bun
 printf "%s\n\n" '___________________________________________________________'
 #______________________________________________________________________________
 
+# An open source browser for developing user interfaces.
+sudo pacman -S --needed --noconfirm chromium
+
+printf "%s\n\n" '___________________________________________________________'
+#______________________________________________________________________________
+
 # Language support for the following file types:
 # .html .css .json
 bun install --global --trust vscode-langservers-extracted
