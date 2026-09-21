@@ -1,1 +1,5 @@
-require("d01-core-settings.f05_lsp_settings")
+require("d01-core-settings.f01_keymap_settings")
+require("d01-core-settings.f02_native_options")
+require("d01-core-settings.f03_plugin_manager")
+require("d01-core-settings.f04_lsp_settings")
+require("d01-core-settings.f05_diagnostic_display")
