@@ -44,6 +44,12 @@ bun install --global --trust @vtsls/language-server
 printf "%s\n\n" '___________________________________________________________'
 #______________________________________________________________________________
 
+# Needed by Astro
+
+bun install --global --trust typescript
+printf "%s\n\n" '___________________________________________________________'
+#______________________________________________________________________________
+
 # Language support for the following file types:
 # .astro
 bun install --global --trust @astrojs/language-server
