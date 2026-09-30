@@ -44,3 +44,5 @@ printf "%s\n\n" '___________________________________________________________'
 #______________________________________________________________________________
 
 paru -S --needed --noconfirm comfy-desktop-bin
+
+sudo pacman -S --needed --noconfirm wezterm

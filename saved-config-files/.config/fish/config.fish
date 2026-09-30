@@ -104,10 +104,12 @@ set -g GH_PUBLIC "$HOME/local-workspace/github/public"
 set -g GH_PRIVATE "$HOME/local-workspace/github/private"
 
 alias github-public="cd $GH_PUBLIC"
-alias dezlykit="cd $GH_PUBLIC/dezlykit"
+alias database-lab="cd $GH_PUBLIC/database-lab"
 alias devops-lab="cd $GH_PUBLIC/devops-lab"
-
 alias dezlykit="cd $GH_PUBLIC/dezlykit"
+alias python-lab="cd $GH_PUBLIC/python-lab"
+alias rust-lab="cd $GH_PUBLIC/rust-lab"
+alias ui-lab="cd $GH_PUBLIC/ui-lab"
 
 alias github-private="cd $GH_PRIVATE"
 
@@ -139,10 +141,10 @@ alias github-private="cd $GH_PRIVATE"
 
 # SECTION: Configuration Aliases
 
-alias cfgfish="cd $HOME/.config/fish && nvim ."
-alias cfgghostty="cd $HOME/.config/ghostty && nvim ."
-alias cfghyprland="cd $HOME/.config/hypr && nvim ."
-alias cfgneovim="cd $HOME/.config/nvim && nvim ."
+alias config-fish="cd $HOME/.config/fish && nvim config.fish"
+alias config-neovim="cd $HOME/.config/nvim && nvim ."
+alias config-rio="cd $HOME/.config/rio && nvim config.toml"
+
 alias cfgyazi="cd $HOME/.config/yazi && nvim ."
 alias cfgzellij="cd $HOME/.config/zellij && nvim ."
 

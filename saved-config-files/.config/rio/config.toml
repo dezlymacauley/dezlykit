@@ -1,91 +1,42 @@
+
 [fonts]
 
+# Controls font size
 size = 20
 
+family = "FiraCode Nerd Font"
 
-# Prevents `!=` from being displayed like ≠
-
+# Prevents character combinations like this `!=` 
+# from being displayed like this `≠`
 features = ["-calt"]
 
-
-# Force Rio to draw bold text using the brighter/light color palette variants
-
-draw-bold-text-with-light-colors = true
-
-
-[fonts.regular]
-
-family = "MesloLGS Nerd Font"
-
-style = "bold"
-
-
-[fonts.bold]
-
-family = "MesloLGS Nerd Font"
-
-style = "bold"
-
-
-[fonts.italic]
-
-family = "MesloLGS Nerd Font"
-
-style = "default"
-
-
-[fonts.bold-italic]
-
-family = "MesloLGS Nerd Font"
-
-style = "default"
-
-
-extras = [
-
-    { family = "Noto Color Emoji" }
-
+# Ensures that emoji's like the cloud in `☁️ (us-east-1)`
+# are displayed correctly
+symbol-map = [
+    { start = "2601", end = "2601", font-family = "Noto Color Emoji" }
 ]
-
-
-[fonts.emoji]
-
-family = "Noto Color Emoji"
-
-
-# Hides Rio's tab navigation bar, 
-
-# and turns off any Rio tab related bindings to avoid clashes with Zellij
+#______________________________________________________________________________
 
 [navigation]
 
+# Hides Rio's tab navigation bar, 
+# and turns off any Rio tab related bindings to avoid clashes with Zellij
 mode = "Plain"
-
+#______________________________________________________________________________
 
 [colors]
-
-background = "#0F0D0E"
-
-foreground = "#F9F4DA"
-
-
-[colors.selection]
-
-background = "#44C9F0"
-
-foreground = "#0F0D0E"
-
-
-[cursor]
-
-shape = "underline"
-
+background = "#000000"
+#______________________________________________________________________________
 
 [window.background-image]
+
+# WARNING: 
+# 1. Do not add a path to an image without setting the opacity first
+# 2. Do not set the 
 
 # Do not set path without an opacity value
 
 opacity = 0.12
-
 path = "/home/dezlymacauley/local-workspace/shared-assets/purple_mech.jpg"
 
+#______________________________________________________________________________
