@@ -7,6 +7,7 @@ pacman -Qe | grep -vFf (pacman -Qem | psub)
 ```
 _______________________________________________________________________________
 
+```
 7zip 26.03-1
 acpi 1.8-2
 base 3-3
@@ -104,7 +105,9 @@ tree 2.3.2-1
 tree-sitter 0.26.9-1
 tree-sitter-cli 0.26.9-1
 ttf-cascadia-code-nerd 3.5.1-2
+ttf-jetbrains-mono-nerd 3.5.1-2
 ttf-meslo-nerd 3.5.1-2
+ttf-nerd-fonts-symbols-mono 3.5.1-1
 ty 0.0.84-1
 udiskie 2.7.0-2
 ufw 0.36.2-7
@@ -115,6 +118,7 @@ virt-manager 5.1.0-4
 virt-viewer 11.0-4
 vulkan-intel 1:26.2.3-1
 webkit2gtk-4.1 2.52.6-1
+wezterm 20240203.110809.5046fc22.r869.g76b606ec5-3
 wireplumber 0.5.17-2
 wl-clip-persist 0.5.0-2
 wl-clipboard 1:2.3.0-1
@@ -128,4 +132,5 @@ zellij 0.45.1-1
 zig 0.16.0-1
 zls 0.15.1-1
 zram-generator 1.2.1-1
+```
 _______________________________________________________________________________

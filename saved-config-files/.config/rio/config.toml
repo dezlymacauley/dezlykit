@@ -4,7 +4,7 @@
 # Controls font size
 size = 20
 
-family = "FiraCode Nerd Font"
+family = "JetBrainsMono Nerd Font"
 
 # Prevents character combinations like this `!=` 
 # from being displayed like this `≠`
