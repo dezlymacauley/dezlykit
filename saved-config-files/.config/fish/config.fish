@@ -104,8 +104,12 @@ set -g GH_PUBLIC "$HOME/local-workspace/github/public"
 set -g GH_PRIVATE "$HOME/local-workspace/github/private"
 
 alias github-public="cd $GH_PUBLIC"
-alias github-private="cd $GH_PRIVATE"
 alias dezlykit="cd $GH_PUBLIC/dezlykit"
+alias devops-lab="cd $GH_PUBLIC/devops-lab"
+
+alias dezlykit="cd $GH_PUBLIC/dezlykit"
+
+alias github-private="cd $GH_PRIVATE"
 
 #______________________________________________________________________________
 
