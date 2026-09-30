@@ -26,5 +26,3 @@ end, {
     desc = "[f]ormat [f]ile",
     buffer = true,
 })
-
-

@@ -1,0 +1,24 @@
+# command = "fish --login"
+
+font-family = "MesloLGM Nerd Font"
+font-size = 15
+
+background = #000000
+theme = "Kitty Default"
+
+cursor-color = #70008B
+cursor-text = #ffffff
+cursor-style = underline
+
+selection-background = #610079
+selection-foreground = #ffffff
+
+background-image = /home/dezlymacauley/.shared-assets/purple_mech.jpg
+background-image-fit = cover
+background-image-opacity = 0.10
+
+mouse-hide-while-typing = true
+confirm-close-surface = true
+
+# The line below helps Neovim provide syntax highlighting for this file
+# vim: ft=dosini

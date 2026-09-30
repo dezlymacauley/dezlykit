@@ -1,0 +1,91 @@
+[fonts]
+
+size = 20
+
+
+# Prevents `!=` from being displayed like ≠
+
+features = ["-calt"]
+
+
+# Force Rio to draw bold text using the brighter/light color palette variants
+
+draw-bold-text-with-light-colors = true
+
+
+[fonts.regular]
+
+family = "MesloLGS Nerd Font"
+
+style = "bold"
+
+
+[fonts.bold]
+
+family = "MesloLGS Nerd Font"
+
+style = "bold"
+
+
+[fonts.italic]
+
+family = "MesloLGS Nerd Font"
+
+style = "default"
+
+
+[fonts.bold-italic]
+
+family = "MesloLGS Nerd Font"
+
+style = "default"
+
+
+extras = [
+
+    { family = "Noto Color Emoji" }
+
+]
+
+
+[fonts.emoji]
+
+family = "Noto Color Emoji"
+
+
+# Hides Rio's tab navigation bar, 
+
+# and turns off any Rio tab related bindings to avoid clashes with Zellij
+
+[navigation]
+
+mode = "Plain"
+
+
+[colors]
+
+background = "#0F0D0E"
+
+foreground = "#F9F4DA"
+
+
+[colors.selection]
+
+background = "#44C9F0"
+
+foreground = "#0F0D0E"
+
+
+[cursor]
+
+shape = "underline"
+
+
+[window.background-image]
+
+# Do not set path without an opacity value
+
+opacity = 0.12
+
+path = "/home/dezlymacauley/local-workspace/shared-assets/purple_mech.jpg"
+
