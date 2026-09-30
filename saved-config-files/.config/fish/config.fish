@@ -3,7 +3,6 @@
 # SECTION: Path Statements
 
 #______________________________________________________________________________
-
 # Globally installed npm packages
 
 # Creates a custom directory for npm packages installed with the `-g` flag.
@@ -104,12 +103,16 @@ set -g GH_PUBLIC "$HOME/local-workspace/github/public"
 set -g GH_PRIVATE "$HOME/local-workspace/github/private"
 
 alias github-public="cd $GH_PUBLIC"
+alias c-lab="cd $GH_PUBLIC/c-lab"
+alias cpp-lab="cd $GH_PUBLIC/cpp-lab"
 alias database-lab="cd $GH_PUBLIC/database-lab"
 alias devops-lab="cd $GH_PUBLIC/devops-lab"
-alias dezlykit="cd $GH_PUBLIC/dezlykit"
+alias dezly-kit="cd $GH_PUBLIC/dezly-kit"
+alias go-lab="cd $GH_PUBLIC/go-lab"
 alias python-lab="cd $GH_PUBLIC/python-lab"
 alias rust-lab="cd $GH_PUBLIC/rust-lab"
 alias ui-lab="cd $GH_PUBLIC/ui-lab"
+alias zig-lab="cd $GH_PUBLIC/zig-lab"
 
 alias github-private="cd $GH_PRIVATE"
 
